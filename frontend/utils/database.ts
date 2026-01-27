@@ -1,17 +1,26 @@
-import * as SQLite from 'expo-sqlite';
 import { Platform } from 'react-native';
 import { UserProfile, SkillProfile, Attempt, ReviewSchedule } from '../types';
 
-let db: SQLite.SQLiteDatabase | null = null;
+// Conditional imports to avoid web worker issues
+let SQLite: any = null;
+let db: any = null;
+
+// Lazy load SQLite only on native platforms
+const loadSQLite = async () => {
+  if (Platform.OS !== 'web' && !SQLite) {
+    SQLite = await import('expo-sqlite');
+  }
+};
 
 export const initDatabase = async () => {
   // SQLite only works on native platforms (iOS/Android), not web
   if (Platform.OS === 'web') {
-    console.log('Database initialization skipped on web platform');
+    console.log('Database initialization skipped on web platform - using localStorage fallback');
     return null;
   }
 
   try {
+    await loadSQLite();
     db = await SQLite.openDatabaseAsync('morning_memory_gym.db');
     
     // Create tables
