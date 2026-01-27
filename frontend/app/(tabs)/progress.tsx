@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useAppStore } from '../../store/appStore';
 import { t } from '../../constants/i18n';
-import { getUserAttempts } from '../../utils/database';
+import { loadAttempts } from '../../utils/storage';
 import { Attempt } from '../../types';
 
 const { width } = Dimensions.get('window');
