@@ -1,0 +1,123 @@
+{
+  "exercises": [
+    {
+      "id": "number_recall_otp",
+      "name": "One-Shot OTP",
+      "type": "number_recall",
+      "params": {
+        "minDigits": 4,
+        "maxDigits": 10,
+        "defaultDigits": 6,
+        "minExposureMs": 600,
+        "maxExposureMs": 2000,
+        "defaultExposureMs": 1200,
+        "hasDistractor": false
+      },
+      "scoring": {
+        "correctPoints": 10,
+        "partialPoints": 5,
+        "timeBonus": true,
+        "penaltyPerError": 2
+      },
+      "scheduling": {
+        "initialInterval": 5,
+        "successMultiplier": 2.0,
+        "failureMultiplier": 0.5,
+        "maxInterval": 7
+      },
+      "minAppVersion": "1.0.0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "name_face_snap",
+      "name": "Name-Face Snap",
+      "type": "name_face",
+      "params": {
+        "exposureMs": 3000,
+        "recallDelayMs": 2000,
+        "multipleChoiceCount": 4,
+        "requiresTyping": false
+      },
+      "scoring": {
+        "correctPoints": 15,
+        "timeBonus": false,
+        "penaltyPerError": 3
+      },
+      "scheduling": {
+        "initialInterval": 60,
+        "successMultiplier": 2.5,
+        "failureMultiplier": 0.3,
+        "maxInterval": 14
+      },
+      "minAppVersion": "1.0.0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "focus_switch_rules",
+      "name": "Switch Rules",
+      "type": "focus_switch",
+      "params": {
+        "numbersCount": 10,
+        "timeLimit": 5000,
+        "rulesPerSession": 3,
+        "rules": [
+          "Tap only odd numbers",
+          "Tap only even numbers",
+          "Tap numbers greater than 5",
+          "Tap numbers less than 5",
+          "Tap prime numbers"
+        ]
+      },
+      "scoring": {
+        "correctPoints": 5,
+        "timeBonus": true,
+        "penaltyPerError": 1
+      },
+      "scheduling": {
+        "initialInterval": 30,
+        "successMultiplier": 1.8,
+        "failureMultiplier": 0.6,
+        "maxInterval": 7
+      },
+      "minAppVersion": "1.0.0",
+      "version": "1.0.0"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "numbers",
+      "name": "Numbers/OTP",
+      "description": "Train your number recall and OTP memory",
+      "exerciseIds": ["number_recall_otp"],
+      "icon": "calculator"
+    },
+    {
+      "id": "names",
+      "name": "Names & Faces",
+      "description": "Remember names and match them to faces",
+      "exerciseIds": ["name_face_snap"],
+      "icon": "person"
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "description": "Improve attention and cognitive flexibility",
+      "exerciseIds": ["focus_switch_rules"],
+      "icon": "eye"
+    },
+    {
+      "id": "custom",
+      "name": "Custom Mix",
+      "description": "Mix of all exercise types",
+      "exerciseIds": ["number_recall_otp", "name_face_snap", "focus_switch_rules"],
+      "icon": "shuffle"
+    },
+    {
+      "id": "surprise",
+      "name": "Surprise Me",
+      "description": "Random exercise selection",
+      "exerciseIds": ["number_recall_otp", "name_face_snap", "focus_switch_rules"],
+      "icon": "gift"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "contentPacks": [
+    {
+      "id": "en-US-v1",
+      "locale": "en-US",
+      "version": "1.0.0",
+      "assets": {},
+      "items": {
+        "names": [
+          "James", "Mary", "Robert", "Patricia", "Michael", "Jennifer", "William", "Linda",
+          "David", "Barbara", "Richard", "Elizabeth", "Joseph", "Susan", "Thomas", "Jessica",
+          "Charles", "Sarah", "Christopher", "Karen", "Daniel", "Nancy", "Matthew", "Lisa",
+          "Anthony", "Margaret", "Mark", "Betty", "Donald", "Sandra", "Steven", "Ashley",
+          "Paul", "Emily", "Andrew", "Kimberly", "Joshua", "Donna", "Kenneth", "Michelle"
+        ],
+        "faces": [],
+        "tips": {
+          "number_recall": [
+            "Break numbers into chunks (98-21-07)",
+            "Create a rhythm when memorizing",
+            "Visualize numbers as objects or shapes",
+            "Use the phonetic number system",
+            "Practice with phone numbers daily"
+          ],
+          "name_face": [
+            "Link the name to a facial feature",
+            "Create a story or association",
+            "Repeat the name immediately",
+            "Focus on unique characteristics",
+            "Use the name in conversation"
+          ],
+          "focus": [
+            "Take a deep breath before switching",
+            "Minimize distractions in your environment",
+            "Practice mindfulness meditation",
+            "Stay hydrated and well-rested",
+            "Break tasks into smaller chunks"
+          ]
+        }
+      }
+    },
+    {
+      "id": "en-IN-v1",
+      "locale": "en-IN",
+      "version": "1.0.0",
+      "assets": {},
+      "items": {
+        "names": [
+          "Arjun", "Priya", "Rahul", "Anjali", "Amit", "Pooja", "Ravi", "Sneha",
+          "Vijay", "Kavita", "Suresh", "Deepika", "Anil", "Meera", "Rajesh", "Divya",
+          "Kiran", "Lakshmi", "Sanjay", "Rekha", "Manoj", "Nisha", "Prakash", "Shalini",
+          "Ashok", "Madhuri", "Ramesh", "Sunita", "Mohan", "Geeta", "Kumar", "Asha",
+          "Dinesh", "Sarita", "Sunil", "Preeti", "Narendra", "Vidya", "Mukesh", "Ritu"
+        ],
+        "faces": [],
+        "tips": {
+          "number_recall": [
+            "Group numbers in familiar patterns (mobile: 98-XXX-XXXXX)",
+            "Use number associations from daily life",
+            "Practice with important dates and numbers",
+            "Visualize numbers in Devanagari or regional script",
+            "Create mental images for number sequences"
+          ],
+          "name_face": [
+            "Associate names with family members",
+            "Link to regional or cultural references",
+            "Notice distinctive features first",
+            "Repeat the name three times mentally",
+            "Create a story connecting name and face"
+          ],
+          "focus": [
+            "Practice pranayama breathing exercises",
+            "Take regular breaks during tasks",
+            "Maintain consistent sleep schedule",
+            "Stay mentally active with puzzles",
+            "Exercise regularly for brain health"
+          ]
+        }
+      }
+    }
+  ]
+}
