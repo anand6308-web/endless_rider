@@ -101,7 +101,14 @@ export const getDatabase = () => {
 
 // User Profile operations
 export const createUserProfile = async (profile: UserProfile): Promise<void> => {
+  if (Platform.OS === 'web') {
+    console.log('Web: Would save user profile', profile);
+    return;
+  }
+  
   const database = getDatabase();
+  if (!database) return;
+  
   await database.runAsync(
     `INSERT OR REPLACE INTO user_profile 
      (user_id, locale, selected_track, daily_time, voice_mode, text_size, high_contrast, notifications_enabled, created_at, updated_at)
