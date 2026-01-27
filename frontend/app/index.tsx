@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAppStore } from '../store/appStore';
-import { getUserProfile } from '../utils/database';
+import { loadUserProfile } from '../utils/storage';
 
 export default function SplashScreen() {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function SplashScreen() {
         setUserId(storedUserId);
 
         // Check if user profile exists
-        const profile = await getUserProfile(storedUserId);
+        const profile = await loadUserProfile(storedUserId);
         
         if (profile) {
           setUserProfile(profile);

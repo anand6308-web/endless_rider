@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Switch, Platform } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Switch } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAppStore } from '../store/appStore';
-import { createUserProfile, createSkillProfile } from '../utils/database';
+import { saveUserProfile, saveSkillProfile } from '../utils/storage';
 import { t, LocaleCode } from '../constants/i18n';
 import { UserProfile, SkillProfile } from '../types';
 
@@ -47,7 +47,7 @@ export default function OnboardingScreen() {
         updatedAt: new Date(),
       };
 
-      await createUserProfile(userProfile);
+      await saveUserProfile(userProfile);
       setUserProfile(userProfile);
       setCurrentLocale(selectedLocale);
 
@@ -60,7 +60,7 @@ export default function OnboardingScreen() {
         updatedAt: new Date(),
       };
 
-      await createSkillProfile(skillProfile);
+      await saveSkillProfile(skillProfile);
       setSkillProfile(skillProfile);
       setIsOnboarded(true);
 
