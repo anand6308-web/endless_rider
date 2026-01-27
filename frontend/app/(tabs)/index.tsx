@@ -32,9 +32,15 @@ export default function HomeScreen() {
       mode: selectedMode,
     };
 
-    // For now, navigate to a placeholder
-    // TODO: Implement exercise screen
-    console.log('Starting session:', sessionConfig);
+    // Navigate to session screen
+    router.push({
+      pathname: '/session',
+      params: {
+        track: selectedTrack,
+        duration: selectedTime.toString(),
+        mode: selectedMode,
+      },
+    });
   };
 
   return (
