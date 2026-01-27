@@ -26,7 +26,7 @@ export default function ProgressScreen() {
 
   const loadProgress = async () => {
     try {
-      const userAttempts = await getUserAttempts(userId, 100);
+      const userAttempts = await loadAttempts(userId, 100);
       setAttempts(userAttempts);
 
       // Calculate stats
