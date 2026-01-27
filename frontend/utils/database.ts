@@ -78,6 +78,12 @@ export const initDatabase = async () => {
 };
 
 export const getDatabase = () => {
+  if (Platform.OS === 'web') {
+    // On web, return a mock or use localStorage/IndexedDB instead
+    console.warn('Database not available on web platform');
+    return null;
+  }
+  
   if (!db) {
     throw new Error('Database not initialized. Call initDatabase() first.');
   }
