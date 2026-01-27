@@ -1,9 +1,16 @@
 import * as SQLite from 'expo-sqlite';
+import { Platform } from 'react-native';
 import { UserProfile, SkillProfile, Attempt, ReviewSchedule } from '../types';
 
 let db: SQLite.SQLiteDatabase | null = null;
 
 export const initDatabase = async () => {
+  // SQLite only works on native platforms (iOS/Android), not web
+  if (Platform.OS === 'web') {
+    console.log('Database initialization skipped on web platform');
+    return null;
+  }
+
   try {
     db = await SQLite.openDatabaseAsync('morning_memory_gym.db');
     
