@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { initDatabase } from '../utils/database';
+import { initStorage } from '../utils/storage';
 import { useAppStore } from '../store/appStore';
 
 export default function RootLayout() {
@@ -11,7 +11,7 @@ export default function RootLayout() {
   useEffect(() => {
     const initialize = async () => {
       try {
-        await initDatabase();
+        await initStorage();
         loadExercises();
         loadContentPacks();
         console.log('App initialized successfully');
