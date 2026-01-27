@@ -5,12 +5,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useAppStore } from '../store/appStore';
 import { generateSessionPlan } from '../utils/sessionEngine';
-import { saveAttempt, updateSkillProfile, loadSkillProfile } from '../../utils/storage';
-import { calculateQuality, calculateNextReview } from '../../utils/spacedRepetition';
-import { SessionConfig, Attempt, SessionResult } from '../../types';
-import NumberRecallExercise from '../../components/exercises/NumberRecallExercise';
-import NameFaceExercise from '../../components/exercises/NameFaceExercise';
-import FocusSwitchExercise from '../../components/exercises/FocusSwitchExercise';
+import { saveAttempt, updateSkillProfile, loadSkillProfile } from '../utils/storage';
+import { calculateQuality, calculateNextReview } from '../utils/spacedRepetition';
+import { SessionConfig, Attempt, SessionResult } from '../types';
+import NumberRecallExercise from '../components/exercises/NumberRecallExercise';
+import NameFaceExercise from '../components/exercises/NameFaceExercise';
+import FocusSwitchExercise from '../components/exercises/FocusSwitchExercise';
 
 export default function SessionScreen() {
   const router = useRouter();
