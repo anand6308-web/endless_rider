@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Switch, Alert } f
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useAppStore } from '../../store/appStore';
-import { updateUserProfile } from '../../utils/database';
+import { updateUserProfile } from '../../utils/storage';
 import { t, LocaleCode } from '../../constants/i18n';
 
 export default function SettingsScreen() {
