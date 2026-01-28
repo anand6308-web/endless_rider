@@ -157,100 +157,244 @@ export const translations: Translations = {
   'onboarding.voiceMode': {
     'en-US': 'Enable voice mode',
     'en-IN': 'Enable voice mode',
-    'te-IN': 'వాయిస్ మోడ్ ప్రారంభించండి'
+    'te-IN': 'వాయిస్ మోడ్ ప్రారంభించండి',
+    'hi-IN': 'वॉयस मोड सक्षम करें',
+    'ta-IN': 'குரல் பயன்முறையை இயக்கவும்',
+    'kn-IN': 'ಧ್ವನಿ ಮೋಡ್ ಸಕ್ರಿಯಗೊಳಿಸಿ',
+    'ml-IN': 'വോയ്‌സ് മോഡ് പ്രാപ്തമാക്കുക',
+    'mr-IN': 'व्हॉइस मोड सक्षम करा',
+    'bn-IN': 'ভয়েস মোড সক্রিয় করুন',
+    'gu-IN': 'વૉઇસ મોડ સક્ષમ કરો',
+    'pa-IN': 'ਵੌਇਸ ਮੋਡ ਸਮਰੱਥ ਕਰੋ'
   },
   'onboarding.disclaimer': {
     'en-US': 'This is a training app, not a medical device',
     'en-IN': 'This is a training app, not a medical device',
-    'te-IN': 'ఇది శిక్షణ యాప్, వైద్య పరికరం కాదు'
-  },
-  'onboarding.getStarted': {
-    'en-US': 'Get Started',
-    'en-IN': 'Get Started',
-    'te-IN': 'ప్రారంభించండి'
+    'te-IN': 'ఇది శిక్షణ యాప్, వైద్య పరికరం కాదు',
+    'hi-IN': 'यह एक प्रशिक्षण ऐप है, चिकित्सा उपकरण नहीं',
+    'ta-IN': 'இது ஒரு பயிற்சி செயலி, மருத்துவ சாதனம் அல்ல',
+    'kn-IN': 'ಇದು ತರಬೇತಿ ಅಪ್ಲಿಕೇಶನ್, ವೈದ್ಯಕೀಯ ಸಾಧನವಲ್ಲ',
+    'ml-IN': 'ഇത് ഒരു പരിശീലന ആപ്പാണ്, മെഡിക്കൽ ഉപകരണമല്ല',
+    'mr-IN': 'हे एक प्रशिक्षण अॅप आहे, वैद्यकीय उपकरण नाही',
+    'bn-IN': 'এটি একটি প্রশিক্ষণ অ্যাপ, চিকিৎসা যন্ত্র নয়',
+    'gu-IN': 'આ એક તાલીમ એપ્લિકેશન છે, તબીબી ઉપકરણ નથી',
+    'pa-IN': 'ਇਹ ਇੱਕ ਸਿਖਲਾਈ ਐਪ ਹੈ, ਮੈਡੀਕਲ ਡਿਵਾਈਸ ਨਹੀਂ'
   },
   
   // Home Screen
   'home.title': {
     'en-US': 'Daily Session',
     'en-IN': 'Daily Session',
-    'te-IN': 'రోజువారీ సెషన్'
-  },
-  'home.startSession': {
-    'en-US': 'Start Session',
-    'en-IN': 'Start Session',
-    'te-IN': 'సెషన్ ప్రారంభించండి'
+    'te-IN': 'రోజువారీ సెషన్',
+    'hi-IN': 'दैनिक सत्र',
+    'ta-IN': 'தினசரி அமர்வு',
+    'kn-IN': 'ದೈನಂದಿನ ಅಧಿವೇಶನ',
+    'ml-IN': 'ദിനംപ്രതി സെഷൻ',
+    'mr-IN': 'दैनिक सत्र',
+    'bn-IN': 'দৈনিক সেশন',
+    'gu-IN': 'દૈનિક સત્ર',
+    'pa-IN': 'ਰੋਜ਼ਾਨਾ ਸੈਸ਼ਨ'
   },
   'home.track': {
     'en-US': 'Track',
     'en-IN': 'Track',
-    'te-IN': 'ట్రాక్'
+    'te-IN': 'ట్రాక్',
+    'hi-IN': 'ट्रैक',
+    'ta-IN': 'தடம்',
+    'kn-IN': 'ಟ್ರ್ಯಾಕ್',
+    'ml-IN': 'ട്രാക്ക്',
+    'mr-IN': 'ट्रॅक',
+    'bn-IN': 'ট্র্যাক',
+    'gu-IN': 'ટ્રેક',
+    'pa-IN': 'ਟਰੈਕ'
   },
   'home.time': {
     'en-US': 'Time',
     'en-IN': 'Time',
-    'te-IN': 'సమయం'
+    'te-IN': 'సమయం',
+    'hi-IN': 'समय',
+    'ta-IN': 'நேரம்',
+    'kn-IN': 'ಸಮಯ',
+    'ml-IN': 'സമയം',
+    'mr-IN': 'वेळ',
+    'bn-IN': 'সময়',
+    'gu-IN': 'સમય',
+    'pa-IN': 'ਸਮਾਂ'
   },
   'home.mode': {
     'en-US': 'Mode',
     'en-IN': 'Mode',
-    'te-IN': 'మోడ్'
+    'te-IN': 'మోడ్',
+    'hi-IN': 'मोड',
+    'ta-IN': 'முறை',
+    'kn-IN': 'ಮೋಡ್',
+    'ml-IN': 'മോഡ്',
+    'mr-IN': 'मोड',
+    'bn-IN': 'মোড',
+    'gu-IN': 'મોડ',
+    'pa-IN': 'ਮੋਡ'
   },
   'home.minutes': {
     'en-US': 'minutes',
     'en-IN': 'minutes',
-    'te-IN': 'నిమిషాలు'
+    'te-IN': 'నిమిషాలు',
+    'hi-IN': 'मिनट',
+    'ta-IN': 'நிமிடங்கள்',
+    'kn-IN': 'ನಿಮಿಷಗಳು',
+    'ml-IN': 'മിനിറ്റ്',
+    'mr-IN': 'मिनिटे',
+    'bn-IN': 'মিনিট',
+    'gu-IN': 'મિનિટ',
+    'pa-IN': 'ਮਿੰਟ'
   },
   
   // Tracks
   'track.numbers': {
     'en-US': 'Numbers/OTP',
     'en-IN': 'Numbers/OTP',
-    'te-IN': 'సంఖ్యలు/OTP'
+    'te-IN': 'సంఖ్యలు/OTP',
+    'hi-IN': 'नंबर/OTP',
+    'ta-IN': 'எண்கள்/OTP',
+    'kn-IN': 'ಸಂಖ್ಯೆಗಳು/OTP',
+    'ml-IN': 'നമ്പറുകൾ/OTP',
+    'mr-IN': 'क्रमांक/OTP',
+    'bn-IN': 'নম্বর/OTP',
+    'gu-IN': 'નંબર/OTP',
+    'pa-IN': 'ਨੰਬਰ/OTP'
   },
   'track.names': {
     'en-US': 'Names & Faces',
     'en-IN': 'Names & Faces',
-    'te-IN': 'పేర్లు & ముఖాలు'
+    'te-IN': 'పేర్లు & ముఖాలు',
+    'hi-IN': 'नाम और चेहरे',
+    'ta-IN': 'பெயர்கள் & முகங்கள்',
+    'kn-IN': 'ಹೆಸರುಗಳು ಮತ್ತು ಮುಖಗಳು',
+    'ml-IN': 'പേരുകളും മുഖങ്ങളും',
+    'mr-IN': 'नावे आणि चेहरे',
+    'bn-IN': 'নাম ও মুখ',
+    'gu-IN': 'નામ અને ચહેરા',
+    'pa-IN': 'ਨਾਮ ਅਤੇ ਚਿਹਰੇ'
   },
   'track.focus': {
     'en-US': 'Focus',
     'en-IN': 'Focus',
-    'te-IN': 'ఫోకస్'
+    'te-IN': 'ఫోకస్',
+    'hi-IN': 'फोकस',
+    'ta-IN': 'கவனம்',
+    'kn-IN': 'ಗಮನ',
+    'ml-IN': 'ഫോക്കസ്',
+    'mr-IN': 'फोकस',
+    'bn-IN': 'ফোকাস',
+    'gu-IN': 'ધ્યાન',
+    'pa-IN': 'ਫੋਕਸ'
+  },
+  'track.cooking': {
+    'en-US': 'Cooking',
+    'en-IN': 'Cooking',
+    'te-IN': 'వంట',
+    'hi-IN': 'खाना पकाना',
+    'ta-IN': 'சமையல்',
+    'kn-IN': 'ಅಡುಗೆ',
+    'ml-IN': 'പാചകം',
+    'mr-IN': 'स्वयंपाक',
+    'bn-IN': 'রান্না',
+    'gu-IN': 'રસોઈ',
+    'pa-IN': 'ਖਾਣਾ ਪਕਾਉਣਾ'
+  },
+  'track.politics': {
+    'en-US': 'Politics',
+    'en-IN': 'Politics',
+    'te-IN': 'రాజకీయాలు',
+    'hi-IN': 'राजनीति',
+    'ta-IN': 'அரசியல்',
+    'kn-IN': 'ರಾಜಕೀಯ',
+    'ml-IN': 'രാഷ്ട്രീയം',
+    'mr-IN': 'राजकारण',
+    'bn-IN': 'রাজনীতি',
+    'gu-IN': 'રાજકારણ',
+    'pa-IN': 'ਰਾਜਨੀਤੀ'
+  },
+  'track.farming': {
+    'en-US': 'Farming',
+    'en-IN': 'Farming',
+    'te-IN': 'వ్యవసాయం',
+    'hi-IN': 'खेती',
+    'ta-IN': 'விவசாயம்',
+    'kn-IN': 'ಕೃಷಿ',
+    'ml-IN': 'കൃഷി',
+    'mr-IN': 'शेती',
+    'bn-IN': 'কৃষি',
+    'gu-IN': 'ખેતી',
+    'pa-IN': 'ਖੇਤੀ'
   },
   'track.custom': {
     'en-US': 'Custom Mix',
     'en-IN': 'Custom Mix',
-    'te-IN': 'కస్టమ్ మిక్స్'
+    'te-IN': 'కస్టమ్ మిక్స్',
+    'hi-IN': 'कस्टम मिक्स',
+    'ta-IN': 'தனிப்பயன் கலவை',
+    'kn-IN': 'ಕಸ್ಟಮ್ ಮಿಶ್ರಣ',
+    'ml-IN': 'കസ്റ്റം മിക്സ്',
+    'mr-IN': 'कस्टम मिश्रण',
+    'bn-IN': 'কাস্টম মিক্স',
+    'gu-IN': 'કસ્ટમ મિશ્રણ',
+    'pa-IN': 'ਕਸਟਮ ਮਿਕਸ'
   },
   'track.surprise': {
     'en-US': 'Surprise Me',
     'en-IN': 'Surprise Me',
-    'te-IN': 'నన్ను ఆశ్చర్యపరచండి'
+    'te-IN': 'నన్ను ఆశ్చర్యపరచండి',
+    'hi-IN': 'मुझे आश्चर्यचकित करें',
+    'ta-IN': 'என்னை ஆச்சரியப்படுத்துங்கள்',
+    'kn-IN': 'ನನಗೆ ಆಶ್ಚರ್ಯ',
+    'ml-IN': 'എന്നെ അതിശയിപ്പിക്കൂ',
+    'mr-IN': 'मला आश्चर्यचकित करा',
+    'bn-IN': 'আমাকে চমকে দিন',
+    'gu-IN': 'મને આશ્ચર્ય',
+    'pa-IN': 'ਮੈਨੂੰ ਹੈਰਾਨ ਕਰੋ'
   },
   
   // Mode
   'mode.calm': {
     'en-US': 'Calm',
     'en-IN': 'Calm',
-    'te-IN': 'ప్రశాంతత'
+    'te-IN': 'ప్రశాంততత',
+    'hi-IN': 'शांत',
+    'ta-IN': 'அமைதி',
+    'kn-IN': 'ಶಾಂತ',
+    'ml-IN': 'ശാന്തം',
+    'mr-IN': 'शांत',
+    'bn-IN': 'শান্ত',
+    'gu-IN': 'શાંત',
+    'pa-IN': 'ਸ਼ਾਂਤ'
   },
   'mode.game': {
     'en-US': 'Game',
     'en-IN': 'Game',
-    'te-IN': 'గేమ్'
+    'te-IN': 'గేమ్',
+    'hi-IN': 'खेल',
+    'ta-IN': 'விளையாட்டு',
+    'kn-IN': 'ಆಟ',
+    'ml-IN': 'ഗെയിം',
+    'mr-IN': 'खेळ',
+    'bn-IN': 'খেলা',
+    'gu-IN': 'રમત',
+    'pa-IN': 'ਖੇਡ'
   },
   
   // Navigation
-  'nav.home': {
-    'en-US': 'Home',
-    'en-IN': 'Home',
-    'te-IN': 'హోమ్'
-  },
   'nav.explore': {
     'en-US': 'Explore',
     'en-IN': 'Explore',
-    'te-IN': 'అన్వేషించండి'
+    'te-IN': 'అన్వేషించండి',
+    'hi-IN': 'एक्सप्लोर करें',
+    'ta-IN': 'ஆராயுங்கள்',
+    'kn-IN': 'ಅನ್ವೇಷಿಸಿ',
+    'ml-IN': 'പര്യവേക്ഷണം',
+    'mr-IN': 'एक्सप्लोर करा',
+    'bn-IN': 'অন্বেষণ',
+    'gu-IN': 'અન્વેષણ',
+    'pa-IN': 'ਖੋਜੋ'
   },
   'nav.progress': {
     'en-US': 'Progress',
