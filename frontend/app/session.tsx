@@ -65,10 +65,12 @@ export default function SessionScreen() {
     };
 
     await saveAttempt(attempt);
-    setAttempts([...attempts, attempt]);
+    
+    // Update attempts array with new attempt
+    const updatedAttempts = [...attempts, attempt];
+    setAttempts(updatedAttempts);
 
     // Wait for feedback animation to complete before moving to next
-    // The exercise components handle their own 1.5-2s delay, so we don't move immediately
     setTimeout(() => {
       // Move to next item or exercise
       if (currentItemIndex < exercise.items.length - 1) {
@@ -77,21 +79,26 @@ export default function SessionScreen() {
         setCurrentExerciseIndex(currentExerciseIndex + 1);
         setCurrentItemIndex(0);
       } else {
-        // Session complete
-        finishSession();
+        // Session complete - pass the updated attempts for calculation
+        finishSession(updatedAttempts);
       }
-    }, 100); // Small delay to ensure exercise completes its internal transition
+    }, 100);
   };
 
-  const finishSession = async () => {
-    // Update skill profile based on performance
-    const successRate = attempts.filter(a => a.result).length / attempts.length;
-    const avgResponseTime = attempts.reduce((sum, a) => sum + a.responseTimeMs, 0) / attempts.length;
+  const finishSession = async (finalAttempts: any[]) => {
+    // Use the final attempts array passed from handleExerciseComplete
+    const totalAttempts = finalAttempts.length;
+    const successfulAttempts = finalAttempts.filter(a => a.result).length;
+    const successRate = totalAttempts > 0 ? successfulAttempts / totalAttempts : 0;
+    const avgResponseTime = totalAttempts > 0 
+      ? finalAttempts.reduce((sum, a) => sum + a.responseTimeMs, 0) / totalAttempts 
+      : 0;
 
+    // Update skill profile based on performance
     const skillProfile = await loadSkillProfile(userId);
     if (skillProfile) {
       const currentExercise = sessionPlan.exercises[0];
-      const scoreIncrease = successRate * 5; // Increase score based on success rate
+      const scoreIncrease = successRate * 5;
 
       if (currentExercise.exerciseType === 'number_recall') {
         await updateSkillProfile(userId, {
@@ -108,12 +115,12 @@ export default function SessionScreen() {
       }
     }
 
-    // Navigate to results
+    // Navigate to results with correct calculations
     router.push({
       pathname: '/session-results',
       params: {
-        totalAttempts: attempts.length,
-        successfulAttempts: attempts.filter(a => a.result).length,
+        totalAttempts: totalAttempts.toString(),
+        successfulAttempts: successfulAttempts.toString(),
         averageResponseTime: avgResponseTime.toFixed(0),
         accuracyPercentage: (successRate * 100).toFixed(0),
       },
