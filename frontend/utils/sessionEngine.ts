@@ -90,11 +90,25 @@ const generateExerciseItems = (
 
     case 'name_face':
       const contentPacks = contentPacksData.contentPacks;
-      const pack = contentPacks.find(p => p.locale === locale);
-      const names = pack?.items.names || [];
+      let pack = contentPacks.find(p => p.locale === locale);
       
-      for (let i = 0; i < count && i < names.length; i++) {
-        items.push(generateNameFaceItem(exercise, names[i], names, difficultyLevel));
+      // Fallback to en-IN if specific locale pack not found
+      if (!pack) {
+        pack = contentPacks.find(p => p.locale === 'en-IN');
+      }
+      
+      // Final fallback to en-US
+      if (!pack) {
+        pack = contentPacks.find(p => p.locale === 'en-US');
+      }
+      
+      const names = pack?.items?.names || [];
+      
+      // Only generate if we have names
+      if (names.length > 0) {
+        for (let i = 0; i < count && i < names.length; i++) {
+          items.push(generateNameFaceItem(exercise, names[i], names, difficultyLevel));
+        }
       }
       break;
 
