@@ -166,7 +166,6 @@ export default function SettingsScreen() {
             >
               <View style={styles.languageInfo}>
                 <Text style={styles.languageName}>English (US)</Text>
-                <Text style={styles.languageNative}>English (United States)</Text>
               </View>
               {locale === 'en-US' && (
                 <Ionicons name="checkmark-circle" size={24} color="#10b981" />
@@ -181,9 +180,23 @@ export default function SettingsScreen() {
             >
               <View style={styles.languageInfo}>
                 <Text style={styles.languageName}>English (India)</Text>
-                <Text style={styles.languageNative}>English (India)</Text>
               </View>
               {locale === 'en-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('hi-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>हिन्दी</Text>
+                <Text style={styles.languageNative}>Hindi</Text>
+              </View>
+              {locale === 'hi-IN' && (
                 <Ionicons name="checkmark-circle" size={24} color="#10b981" />
               )}
             </TouchableOpacity>
@@ -199,6 +212,111 @@ export default function SettingsScreen() {
                 <Text style={styles.languageNative}>Telugu</Text>
               </View>
               {locale === 'te-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('ta-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>தமிழ்</Text>
+                <Text style={styles.languageNative}>Tamil</Text>
+              </View>
+              {locale === 'ta-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('kn-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>ಕನ್ನಡ</Text>
+                <Text style={styles.languageNative}>Kannada</Text>
+              </View>
+              {locale === 'kn-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('ml-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>മലയാളം</Text>
+                <Text style={styles.languageNative}>Malayalam</Text>
+              </View>
+              {locale === 'ml-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('mr-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>मराठी</Text>
+                <Text style={styles.languageNative}>Marathi</Text>
+              </View>
+              {locale === 'mr-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('bn-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>বাংলা</Text>
+                <Text style={styles.languageNative}>Bengali</Text>
+              </View>
+              {locale === 'bn-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('gu-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>ગુજરાતી</Text>
+                <Text style={styles.languageNative}>Gujarati</Text>
+              </View>
+              {locale === 'gu-IN' && (
+                <Ionicons name="checkmark-circle" size={24} color="#10b981" />
+              )}
+            </TouchableOpacity>
+
+            <View style={styles.divider} />
+
+            <TouchableOpacity
+              style={styles.languageOption}
+              onPress={() => handleLocaleChange('pa-IN')}
+            >
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>ਪੰਜਾਬੀ</Text>
+                <Text style={styles.languageNative}>Punjabi</Text>
+              </View>
+              {locale === 'pa-IN' && (
                 <Ionicons name="checkmark-circle" size={24} color="#10b981" />
               )}
             </TouchableOpacity>
