@@ -562,37 +562,93 @@ export const translations: Translations = {
   'exercise.ready': {
     'en-US': 'Ready?',
     'en-IN': 'Ready?',
-    'te-IN': 'సిద్ధంగా ఉన్నారా?'
+    'te-IN': 'సిద్ధంగా ఉన్నారా?',
+    'hi-IN': 'तैयार?',
+    'ta-IN': 'தயாரா?',
+    'kn-IN': 'ಸಿದ್ಧವಾಗಿದ್ದೀರಾ?',
+    'ml-IN': 'തയ്യാറാണോ?',
+    'mr-IN': 'तयार?',
+    'bn-IN': 'প্রস্তুত?',
+    'gu-IN': 'તૈયાર?',
+    'pa-IN': 'ਤਿਆਰ?'
   },
   'exercise.memorize': {
     'en-US': 'Memorize this',
     'en-IN': 'Memorize this',
-    'te-IN': 'దీన్ని గుర్తుంచుకోండి'
+    'te-IN': 'దీన్ని గుర్తుంచుకోండి',
+    'hi-IN': 'इसे याद करें',
+    'ta-IN': 'இதை நினைவில் வைக்கவும்',
+    'kn-IN': 'ಇದನ್ನು ನೆನಪಿಡಿ',
+    'ml-IN': 'ഇത് ഓർക്കുക',
+    'mr-IN': 'हे लक्षात ठेवा',
+    'bn-IN': 'এটি মনে রাখুন',
+    'gu-IN': 'આને યાદ રાખો',
+    'pa-IN': 'ਇਸਨੂੰ ਯਾਦ ਰੱਖੋ'
   },
   'exercise.recall': {
     'en-US': 'Now recall',
     'en-IN': 'Now recall',
-    'te-IN': 'ఇప్పుడు గుర్తుచేసుకోండి'
+    'te-IN': 'ఇప్పుడు గుర్తుచేసుకోండి',
+    'hi-IN': 'अब याद करें',
+    'ta-IN': 'இப்போது நினைவுபடுத்துங்கள்',
+    'kn-IN': 'ಈಗ ನೆನಪಿಸಿಕೊಳ್ಳಿ',
+    'ml-IN': 'ഇപ്പോൾ ഓർക്കുക',
+    'mr-IN': 'आता आठवा',
+    'bn-IN': 'এখন মনে করুন',
+    'gu-IN': 'હવે યાદ કરો',
+    'pa-IN': 'ਹੁਣ ਯਾਦ ਕਰੋ'
   },
   'exercise.correct': {
     'en-US': 'Correct!',
     'en-IN': 'Correct!',
-    'te-IN': 'సరైనది!'
+    'te-IN': 'సరైనది!',
+    'hi-IN': 'सही!',
+    'ta-IN': 'சரி!',
+    'kn-IN': 'ಸರಿ!',
+    'ml-IN': 'ശരി!',
+    'mr-IN': 'बरोबर!',
+    'bn-IN': 'সঠিক!',
+    'gu-IN': 'સાચું!',
+    'pa-IN': 'ਸਹੀ!'
   },
   'exercise.incorrect': {
     'en-US': 'Incorrect',
     'en-IN': 'Incorrect',
-    'te-IN': 'తప్పు'
+    'te-IN': 'తప్పు',
+    'hi-IN': 'गलत',
+    'ta-IN': 'தவறு',
+    'kn-IN': 'ತಪ್ಪು',
+    'ml-IN': 'തെറ്റ്',
+    'mr-IN': 'चूक',
+    'bn-IN': 'ভুল',
+    'gu-IN': 'ખોટું',
+    'pa-IN': 'ਗਲਤ'
   },
   'exercise.submit': {
     'en-US': 'Submit',
     'en-IN': 'Submit',
-    'te-IN': 'సబ్మిట్'
+    'te-IN': 'సబ్మిట్',
+    'hi-IN': 'जमा करें',
+    'ta-IN': 'சமர்ப்பிக்கவும்',
+    'kn-IN': 'ಸಲ್ಲಿಸಿ',
+    'ml-IN': 'സമർപ്പിക്കുക',
+    'mr-IN': 'सबमिट करा',
+    'bn-IN': 'জমা দিন',
+    'gu-IN': 'સબમિટ કરો',
+    'pa-IN': 'ਜਮ੍ਹਾਂ ਕਰੋ'
   },
   'exercise.next': {
     'en-US': 'Next',
     'en-IN': 'Next',
-    'te-IN': 'తదుపరి'
+    'te-IN': 'తదుపరి',
+    'hi-IN': 'अगला',
+    'ta-IN': 'அடுத்தது',
+    'kn-IN': 'ಮುಂದಿನ',
+    'ml-IN': 'അടുത്തത്',
+    'mr-IN': 'पुढील',
+    'bn-IN': 'পরবর্তী',
+    'gu-IN': 'આગળ',
+    'pa-IN': 'ਅਗਲਾ'
   },
   
   // Common
