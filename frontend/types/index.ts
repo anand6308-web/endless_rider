@@ -149,6 +149,30 @@ export interface FocusSwitchItem {
   timeLimit: number;
 }
 
+// New exercise types
+export interface CookingItem {
+  recipeName: string;
+  ingredients: string[];
+  correctOrder: number[];
+  timeLimit: number;
+}
+
+export interface PoliticsItem {
+  question: string;
+  facts: string[];
+  options: string[];
+  correctAnswer: number;
+}
+
+export interface FarmingItem {
+  cropName: string;
+  stages: string[];
+  tips: string[];
+  question: string;
+  options: string[];
+  correctAnswer: number;
+}
+
 // Navigation types
 export type RootStackParamList = {
   Onboarding: undefined;
