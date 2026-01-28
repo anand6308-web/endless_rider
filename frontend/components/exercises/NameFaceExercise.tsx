@@ -13,6 +13,9 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
   const [selectedName, setSelectedName] = useState('');
   const [startTime, setStartTime] = useState(0);
   const [fadeAnim] = useState(new Animated.Value(0));
+  // Store the original item to prevent re-render issues
+  const [originalItem] = useState(item);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
@@ -27,14 +30,15 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
     setTimeout(() => {
       setPhase('recall');
       setStartTime(Date.now());
-    }, item.exposureMs);
+    }, originalItem.exposureMs);
   };
 
   const handleSelectName = (name: string) => {
     const responseTime = Date.now() - startTime;
-    const correct = name.toLowerCase() === item.name.toLowerCase();
+    const correct = name.toLowerCase() === originalItem.name.toLowerCase();
     
     setSelectedName(name);
+    setIsCorrect(correct);
     setPhase('feedback');
     
     setTimeout(() => {
