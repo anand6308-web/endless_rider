@@ -410,16 +410,6 @@ export const translations: Translations = {
     'gu-IN': 'અન્વેષણ',
     'pa-IN': 'ਖੋਜੋ'
   },
-  'nav.progress': {
-    'en-US': 'Progress',
-    'en-IN': 'Progress',
-    'te-IN': 'పురోగతి'
-  },
-  'nav.settings': {
-    'en-US': 'Settings',
-    'en-IN': 'Settings',
-    'te-IN': 'సెట్టింగ్స్'
-  },
   
   // Progress
   'progress.weeklyStreak': {
