@@ -132,7 +132,7 @@ export default function HomeScreen() {
                       selectedTime === time && styles.timeChipTextActive,
                     ]}
                   >
-                    {time} min
+                    {time} {t('time.min', locale)}
                   </Text>
                 </TouchableOpacity>
               ))}
@@ -202,17 +202,17 @@ export default function HomeScreen() {
           <View style={styles.statCard}>
             <Ionicons name="trophy-outline" size={24} color="#f59e0b" />
             <Text style={styles.statValue}>0</Text>
-            <Text style={styles.statLabel}>Sessions</Text>
+            <Text style={styles.statLabel}>{t('status.sessions', locale)}</Text>
           </View>
           <View style={styles.statCard}>
             <Ionicons name="checkmark-circle-outline" size={24} color="#10b981" />
             <Text style={styles.statValue}>0%</Text>
-            <Text style={styles.statLabel}>Accuracy</Text>
+            <Text style={styles.statLabel}>{t('home.accuracy', locale)}</Text>
           </View>
           <View style={styles.statCard}>
             <Ionicons name="trending-up-outline" size={24} color="#6366f1" />
             <Text style={styles.statValue}>0</Text>
-            <Text style={styles.statLabel}>Level</Text>
+            <Text style={styles.statLabel}>{t('status.level', locale)}</Text>
           </View>
         </View>
       </ScrollView>
