@@ -56,12 +56,12 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Ionicons name="person-circle" size={64} color="#8b5cf6" />
-            <Text style={styles.phaseTitle}>Ready?</Text>
+            <Text style={styles.phaseTitle}>{t('exercise.ready', locale)}</Text>
             <Text style={styles.phaseDescription}>
-              Remember the name with the face
+              {t('exercise.rememberName', locale)}
             </Text>
             <TouchableOpacity style={styles.primaryButton} onPress={handleReady}>
-              <Text style={styles.primaryButtonText}>Start</Text>
+              <Text style={styles.primaryButtonText}>{t('exercise.start', locale)}</Text>
             </TouchableOpacity>
           </Animated.View>
         );
@@ -69,7 +69,7 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
       case 'memorize':
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Memorize</Text>
+            <Text style={styles.phaseTitle}>{t('exercise.memorize', locale)}</Text>
             <View style={styles.faceCard}>
               <View style={styles.facePlaceholder}>
                 <Ionicons name="person" size={80} color="#8b5cf6" />
@@ -85,7 +85,7 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
       case 'recall':
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Who is this?</Text>
+            <Text style={styles.phaseTitle}>{t('exercise.whoIsThis', locale)}</Text>
             <View style={styles.faceCard}>
               <View style={styles.facePlaceholder}>
                 <Ionicons name="person" size={80} color="#8b5cf6" />
@@ -126,17 +126,17 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
               color={isCorrect ? '#10b981' : '#ef4444'} 
             />
             <Text style={[styles.feedbackTitle, { color: isCorrect ? '#10b981' : '#ef4444' }]}>
-              {isCorrect ? 'Correct!' : 'Incorrect'}
+              {isCorrect ? t('exercise.correct', locale) : t('exercise.incorrect', locale)}
             </Text>
             <View style={styles.feedbackDetails}>
               <View style={styles.facePlaceholder}>
                 <Ionicons name="person" size={60} color="#8b5cf6" />
               </View>
-              <Text style={styles.feedbackLabel}>Your answer:</Text>
+              <Text style={styles.feedbackLabel}>{t('exercise.yourAnswer', locale)}</Text>
               <Text style={styles.feedbackValue}>{selectedName}</Text>
               {!isCorrect && (
                 <>
-                  <Text style={styles.feedbackLabel}>Correct name:</Text>
+                  <Text style={styles.feedbackLabel}>{t('exercise.correctAnswer', locale)}</Text>
                   <Text style={styles.feedbackValue}>{originalItem.name}</Text>
                 </>
               )}
