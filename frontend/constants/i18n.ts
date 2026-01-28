@@ -103,45 +103,6 @@ export const translations: Translations = {
     'pa-IN': 'ਪਿੱਛੇ'
   },
   // Removed duplicate home.startSession entry
-  'nav.home': {
-    'en-US': 'Home',
-    'en-IN': 'Home',
-    'te-IN': 'హోమ్',
-    'hi-IN': 'होम',
-    'ta-IN': 'முகப்பு',
-    'kn-IN': 'ಮುಖಪುಟ',
-    'ml-IN': 'ഹോം',
-    'mr-IN': 'होम',
-    'bn-IN': 'হোম',
-    'gu-IN': 'હોમ',
-    'pa-IN': 'ਹੋਮ'
-  },
-  'nav.progress': {
-    'en-US': 'Progress',
-    'en-IN': 'Progress',
-    'te-IN': 'పురోగతి',
-    'hi-IN': 'प्रगति',
-    'ta-IN': 'முன்னேற்றம்',
-    'kn-IN': 'ಪ್ರಗತಿ',
-    'ml-IN': 'പുരോഗതി',
-    'mr-IN': 'प्रगती',
-    'bn-IN': 'অগ্রগতি',
-    'gu-IN': 'પ્રગતિ',
-    'pa-IN': 'ਤਰੱਕੀ'
-  },
-  'nav.settings': {
-    'en-US': 'Settings',
-    'en-IN': 'Settings',
-    'te-IN': 'సెట్టింగ్స్',
-    'hi-IN': 'सेटिंग्स',
-    'ta-IN': 'அமைப்புகள்',
-    'kn-IN': 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು',
-    'ml-IN': 'ക്രമീകരണങ്ങൾ',
-    'mr-IN': 'सेटिंग्ज',
-    'bn-IN': 'সেটিংস',
-    'gu-IN': 'સેટિંગ્સ',
-    'pa-IN': 'ਸੈਟਿੰਗਾਂ'
-  },
   'onboarding.voiceMode': {
     'en-US': 'Enable voice mode',
     'en-IN': 'Enable voice mode',
