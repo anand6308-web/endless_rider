@@ -20,7 +20,15 @@ export default function OnboardingScreen() {
   const locales: { code: LocaleCode; name: string }[] = [
     { code: 'en-US', name: 'English (US)' },
     { code: 'en-IN', name: 'English (India)' },
+    { code: 'hi-IN', name: 'हिन्दी (Hindi)' },
     { code: 'te-IN', name: 'తెలుగు (Telugu)' },
+    { code: 'ta-IN', name: 'தமிழ் (Tamil)' },
+    { code: 'kn-IN', name: 'ಕನ್ನಡ (Kannada)' },
+    { code: 'ml-IN', name: 'മലയാളം (Malayalam)' },
+    { code: 'mr-IN', name: 'मराठी (Marathi)' },
+    { code: 'bn-IN', name: 'বাংলা (Bengali)' },
+    { code: 'gu-IN', name: 'ગુજરાતી (Gujarati)' },
+    { code: 'pa-IN', name: 'ਪੰਜਾਬੀ (Punjabi)' },
   ];
 
   const tracks = [
