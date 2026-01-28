@@ -183,6 +183,19 @@ export const translations: Translations = {
     'gu-IN': 'દૈનિક સત્ર',
     'pa-IN': 'ਰੋਜ਼ਾਨਾ ਸੈਸ਼ਨ'
   },
+  'home.startSession': {
+    'en-US': 'Start Session',
+    'en-IN': 'Start Session',
+    'te-IN': 'సెషన్ ప్రారంభించండి',
+    'hi-IN': 'सत्र शुरू करें',
+    'ta-IN': 'அமர்வைத் தொடங்குங்கள்',
+    'kn-IN': 'ಅಧಿವೇಶನ ಪ್ರಾರಂಭಿಸಿ',
+    'ml-IN': 'സെഷൻ ആരംഭിക്കുക',
+    'mr-IN': 'सत्र सुरू करा',
+    'bn-IN': 'সেশন শুরু করুন',
+    'gu-IN': 'સત્ર શરૂ કરો',
+    'pa-IN': 'ਸੈਸ਼ਨ ਸ਼ੁਰੂ ਕਰੋ'
+  },
   'home.track': {
     'en-US': 'Track',
     'en-IN': 'Track',
