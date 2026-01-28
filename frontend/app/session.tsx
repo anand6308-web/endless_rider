@@ -11,6 +11,9 @@ import { SessionConfig, Attempt, SessionResult } from '../types';
 import NumberRecallExercise from '../components/exercises/NumberRecallExercise';
 import NameFaceExercise from '../components/exercises/NameFaceExercise';
 import FocusSwitchExercise from '../components/exercises/FocusSwitchExercise';
+import CookingExercise from '../components/exercises/CookingExercise';
+import PoliticsExercise from '../components/exercises/PoliticsExercise';
+import FarmingExercise from '../components/exercises/FarmingExercise';
 
 export default function SessionScreen() {
   const router = useRouter();
