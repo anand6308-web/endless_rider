@@ -456,42 +456,106 @@ export const translations: Translations = {
   'settings.accessibility': {
     'en-US': 'Accessibility',
     'en-IN': 'Accessibility',
-    'te-IN': 'ప్రాప్యత'
+    'te-IN': 'ప్రాప్యత',
+    'hi-IN': 'पहुंच',
+    'ta-IN': 'அணுகல்',
+    'kn-IN': 'ಪ್ರವೇಶ',
+    'ml-IN': 'പ്രവേശനം',
+    'mr-IN': 'प्रवेश',
+    'bn-IN': 'অ্যাক্সেসিবিলিটি',
+    'gu-IN': 'પહોંચ',
+    'pa-IN': 'ਪਹੁੰਚ'
   },
   'settings.textSize': {
     'en-US': 'Text Size',
     'en-IN': 'Text Size',
-    'te-IN': 'టెక్స్ట్ పరిమాణం'
+    'te-IN': 'టెక్స్ట్ పరిమాణం',
+    'hi-IN': 'टेक्स्ट आकार',
+    'ta-IN': 'உரை அளவு',
+    'kn-IN': 'ಪಠ್ಯ ಗಾತ್ರ',
+    'ml-IN': 'ടെക്സ്റ്റ് വലുപ്പം',
+    'mr-IN': 'मजकूर आकार',
+    'bn-IN': 'টেক্সট সাইজ',
+    'gu-IN': 'ટેક્સ્ટ સાઇઝ',
+    'pa-IN': 'ਟੈਕਸਟ ਸਾਈਜ਼'
   },
   'settings.highContrast': {
     'en-US': 'High Contrast',
     'en-IN': 'High Contrast',
-    'te-IN': 'అధిక కాంట్రాస్ట్'
+    'te-IN': 'అధిక కాంట్రాస్ట్',
+    'hi-IN': 'उच्च कंट्रास्ट',
+    'ta-IN': 'உயர் மாறுபாடு',
+    'kn-IN': 'ಹೆಚ್ಚಿನ ವ್ಯತ್ಯಾಸ',
+    'ml-IN': 'ഉയർന്ന കോൺട്രാസ്റ്റ്',
+    'mr-IN': 'उच्च कॉन्ट्रास्ट',
+    'bn-IN': 'উচ্চ কনট্রাস্ট',
+    'gu-IN': 'ઉચ્ચ કોન્ટ્રાસ્ટ',
+    'pa-IN': 'ਉੱਚ ਕੰਟਰਾਸਟ'
   },
   'settings.voiceMode': {
     'en-US': 'Voice Mode',
     'en-IN': 'Voice Mode',
-    'te-IN': 'వాయిస్ మోడ్'
+    'te-IN': 'వాయిస్ మోడ్',
+    'hi-IN': 'वॉयस मोड',
+    'ta-IN': 'குரல் பயன்முறை',
+    'kn-IN': 'ಧ್ವನಿ ಮೋಡ್',
+    'ml-IN': 'വോയ്‌സ് മോഡ്',
+    'mr-IN': 'व्हॉइस मोड',
+    'bn-IN': 'ভয়েস মোড',
+    'gu-IN': 'વૉઇસ મોડ',
+    'pa-IN': 'ਵੌਇਸ ਮੋਡ'
   },
   'settings.notifications': {
     'en-US': 'Notifications',
     'en-IN': 'Notifications',
-    'te-IN': 'నోటిఫికేషన్లు'
+    'te-IN': 'నోటిఫికేషన్లు',
+    'hi-IN': 'सूचनाएं',
+    'ta-IN': 'அறிவிப்புகள்',
+    'kn-IN': 'ಅಧಿಸೂಚನೆಗಳು',
+    'ml-IN': 'അറിയിപ്പുകൾ',
+    'mr-IN': 'सूचना',
+    'bn-IN': 'বিজ্ঞপ্তি',
+    'gu-IN': 'સૂચનાઓ',
+    'pa-IN': 'ਸੂਚਨਾਵਾਂ'
   },
   'settings.language': {
     'en-US': 'Language',
     'en-IN': 'Language',
-    'te-IN': 'భాష'
+    'te-IN': 'భాష',
+    'hi-IN': 'भाषा',
+    'ta-IN': 'மொழி',
+    'kn-IN': 'ಭಾಷೆ',
+    'ml-IN': 'ഭാഷ',
+    'mr-IN': 'भाषा',
+    'bn-IN': 'ভাষা',
+    'gu-IN': 'ભાષા',
+    'pa-IN': 'ਭਾਸ਼ਾ'
   },
   'settings.exportData': {
     'en-US': 'Export Data',
     'en-IN': 'Export Data',
-    'te-IN': 'డేటా ఎగుమతి'
+    'te-IN': 'డేటా ఎగుమతి',
+    'hi-IN': 'डेटा निर्यात',
+    'ta-IN': 'தரவு ஏற்றுமதி',
+    'kn-IN': 'ಡೇಟಾ ರಫ್ತು',
+    'ml-IN': 'ഡാറ്റ എക്സ്പോർട്ട്',
+    'mr-IN': 'डेटा निर्यात',
+    'bn-IN': 'ডেটা রপ্তানি',
+    'gu-IN': 'ડેટા નિકાસ',
+    'pa-IN': 'ਡੇਟਾ ਨਿਰਯਾਤ'
   },
   'settings.deleteData': {
     'en-US': 'Delete All Data',
     'en-IN': 'Delete All Data',
-    'te-IN': 'మొత్తం డేటా తొలగించండి'
+    'te-IN': 'మొత్తం డేటా తొలగించండి',
+    'hi-IN': 'सभी डेटा हटाएं',
+    'ta-IN': 'அனைத்து தரவையும் நீக்கவும்',
+    'kn-IN': 'ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ',
+    'ml-IN': 'എല്ലാ ഡാറ്റയും ഇല്ലാതാക്കുക',
+    'mr-IN': 'सर्व डेटा हटवा',
+    'bn-IN': 'সমস্ত ডেটা মুছুন',
+    'gu-IN': 'બધો ડેટા કાઢી નાખો',
+    'pa-IN': 'ਸਾਰਾ ਡੇਟਾ ਮਿਟਾਓ'
   },
   
   // Exercise
