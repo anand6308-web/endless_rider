@@ -231,3 +231,41 @@ const isPrime = (num: number): boolean => {
   }
   return true;
 };
+
+/**
+ * Generate a cooking item
+ */
+const generateCookingItem = (recipe: any, timeLimit: number): CookingItem => {
+  return {
+    recipeName: recipe.name,
+    ingredients: recipe.ingredients,
+    correctOrder: recipe.correctOrder,
+    timeLimit,
+  };
+};
+
+/**
+ * Generate a politics item
+ */
+const generatePoliticsItem = (topic: any): PoliticsItem => {
+  return {
+    question: topic.question,
+    facts: topic.facts,
+    options: topic.options,
+    correctAnswer: topic.correctAnswer,
+  };
+};
+
+/**
+ * Generate a farming item
+ */
+const generateFarmingItem = (crop: any): FarmingItem => {
+  return {
+    cropName: crop.name,
+    stages: crop.stages,
+    tips: crop.tips,
+    question: crop.question,
+    options: crop.options,
+    correctAnswer: crop.correctAnswer,
+  };
+};
