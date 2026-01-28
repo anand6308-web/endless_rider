@@ -173,6 +173,24 @@ export default function SessionScreen() {
             onComplete={handleExerciseComplete}
           />
         )}
+        {currentExercise.exerciseType === 'cooking' && (
+          <CookingExercise
+            item={currentItem}
+            onComplete={handleExerciseComplete}
+          />
+        )}
+        {currentExercise.exerciseType === 'politics' && (
+          <PoliticsExercise
+            item={currentItem}
+            onComplete={handleExerciseComplete}
+          />
+        )}
+        {currentExercise.exerciseType === 'farming' && (
+          <FarmingExercise
+            item={currentItem}
+            onComplete={handleExerciseComplete}
+          />
+        )}
       </View>
     </SafeAreaView>
   );
