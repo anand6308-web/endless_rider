@@ -168,6 +168,19 @@ export const translations: Translations = {
     'gu-IN': 'આ એક તાલીમ એપ્લિકેશન છે, તબીબી ઉપકરણ નથી',
     'pa-IN': 'ਇਹ ਇੱਕ ਸਿਖਲਾਈ ਐਪ ਹੈ, ਮੈਡੀਕਲ ਡਿਵਾਈਸ ਨਹੀਂ'
   },
+  'onboarding.getStarted': {
+    'en-US': 'Get Started',
+    'en-IN': 'Get Started',
+    'te-IN': 'ప్రారంభించండి',
+    'hi-IN': 'शुरू करें',
+    'ta-IN': 'தொடங்குங்கள்',
+    'kn-IN': 'ಪ್ರಾರಂಭಿಸಿ',
+    'ml-IN': 'ആരംഭിക്കുക',
+    'mr-IN': 'सुरू करा',
+    'bn-IN': 'শুরু করুন',
+    'gu-IN': 'શરૂ કરો',
+    'pa-IN': 'ਸ਼ੁਰੂ ਕਰੋ'
+  },
   
   // Home Screen
   'home.title': {
