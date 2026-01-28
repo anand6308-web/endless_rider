@@ -1,7 +1,7 @@
 // Internationalization strings
-// Currently supports: en-US, en-IN, te-IN (basic)
+// Currently supports: en-US, en-IN, te-IN, hi-IN, ta-IN, kn-IN, ml-IN, mr-IN, bn-IN, gu-IN, pa-IN
 
-export type LocaleCode = 'en-US' | 'en-IN' | 'te-IN';
+export type LocaleCode = 'en-US' | 'en-IN' | 'te-IN' | 'hi-IN' | 'ta-IN' | 'kn-IN' | 'ml-IN' | 'mr-IN' | 'bn-IN' | 'gu-IN' | 'pa-IN';
 
 interface Translations {
   [key: string]: {
