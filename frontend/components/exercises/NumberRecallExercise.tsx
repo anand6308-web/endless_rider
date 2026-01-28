@@ -13,6 +13,9 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
   const [userInput, setUserInput] = useState('');
   const [startTime, setStartTime] = useState(0);
   const [fadeAnim] = useState(new Animated.Value(0));
+  // Store the original item to prevent re-render issues
+  const [originalItem] = useState(item);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {
     // Start animation
@@ -28,13 +31,14 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
     setTimeout(() => {
       setPhase('recall');
       setStartTime(Date.now());
-    }, item.exposureMs);
+    }, originalItem.exposureMs);
   };
 
   const handleSubmit = () => {
     const responseTime = Date.now() - startTime;
-    const correct = userInput.trim() === item.digits;
+    const correct = userInput.trim() === originalItem.digits;
     
+    setIsCorrect(correct);
     setPhase('feedback');
     
     setTimeout(() => {
