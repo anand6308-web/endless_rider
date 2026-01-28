@@ -423,6 +423,32 @@ export const translations: Translations = {
     'gu-IN': 'અન્વેષણ',
     'pa-IN': 'ਖੋਜੋ'
   },
+  'nav.progress': {
+    'en-US': 'Progress',
+    'en-IN': 'Progress',
+    'te-IN': 'పురోగతి',
+    'hi-IN': 'प्रगति',
+    'ta-IN': 'முன்னேற்றம்',
+    'kn-IN': 'ಪ್ರಗತಿ',
+    'ml-IN': 'പുരോഗതി',
+    'mr-IN': 'प्रगती',
+    'bn-IN': 'অগ্রগতি',
+    'gu-IN': 'પ્રગતિ',
+    'pa-IN': 'ਤਰੱਕੀ'
+  },
+  'nav.settings': {
+    'en-US': 'Settings',
+    'en-IN': 'Settings',
+    'te-IN': 'సెట్టింగ్స్',
+    'hi-IN': 'सेटिंग्स',
+    'ta-IN': 'அமைப்புகள்',
+    'kn-IN': 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು',
+    'ml-IN': 'ക്രമീകരണങ്ങൾ',
+    'mr-IN': 'सेटिंग्ज',
+    'bn-IN': 'সেটিংস',
+    'gu-IN': 'સેટિંગ્સ',
+    'pa-IN': 'ਸੈਟਿੰਗਾਂ'
+  },
   
   // Progress
   'progress.weeklyStreak': {
