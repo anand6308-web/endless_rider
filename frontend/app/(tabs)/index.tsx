@@ -21,6 +21,9 @@ export default function HomeScreen() {
     { value: 'numbers', label: t('track.numbers', locale), icon: 'calculator', color: '#3b82f6' },
     { value: 'names', label: t('track.names', locale), icon: 'people', color: '#8b5cf6' },
     { value: 'focus', label: t('track.focus', locale), icon: 'eye', color: '#10b981' },
+    { value: 'cooking', label: 'Cooking', icon: 'restaurant', color: '#f59e0b' },
+    { value: 'politics', label: 'Politics', icon: 'flag', color: '#ec4899' },
+    { value: 'farming', label: 'Farming', icon: 'leaf', color: '#22c55e' },
     { value: 'custom', label: t('track.custom', locale), icon: 'shuffle', color: '#f59e0b' },
     { value: 'surprise', label: t('track.surprise', locale), icon: 'gift', color: '#ec4899' },
   ];
