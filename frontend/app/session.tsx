@@ -157,36 +157,42 @@ export default function SessionScreen() {
       <View style={styles.exerciseContainer}>
         {currentExercise.exerciseType === 'number_recall' && (
           <NumberRecallExercise
+            key={`${currentExerciseIndex}-${currentItemIndex}`}
             item={currentItem}
             onComplete={handleExerciseComplete}
           />
         )}
         {currentExercise.exerciseType === 'name_face' && (
           <NameFaceExercise
+            key={`${currentExerciseIndex}-${currentItemIndex}`}
             item={currentItem}
             onComplete={handleExerciseComplete}
           />
         )}
         {currentExercise.exerciseType === 'focus_switch' && (
           <FocusSwitchExercise
+            key={`${currentExerciseIndex}-${currentItemIndex}`}
             item={currentItem}
             onComplete={handleExerciseComplete}
           />
         )}
         {currentExercise.exerciseType === 'cooking' && (
           <CookingExercise
+            key={`${currentExerciseIndex}-${currentItemIndex}`}
             item={currentItem}
             onComplete={handleExerciseComplete}
           />
         )}
         {currentExercise.exerciseType === 'politics' && (
           <PoliticsExercise
+            key={`${currentExerciseIndex}-${currentItemIndex}`}
             item={currentItem}
             onComplete={handleExerciseComplete}
           />
         )}
         {currentExercise.exerciseType === 'farming' && (
           <FarmingExercise
+            key={`${currentExerciseIndex}-${currentItemIndex}`}
             item={currentItem}
             onComplete={handleExerciseComplete}
           />
