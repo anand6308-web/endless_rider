@@ -64,16 +64,20 @@ export default function SessionScreen() {
     await saveAttempt(attempt);
     setAttempts([...attempts, attempt]);
 
-    // Move to next item or exercise
-    if (currentItemIndex < exercise.items.length - 1) {
-      setCurrentItemIndex(currentItemIndex + 1);
-    } else if (currentExerciseIndex < sessionPlan.exercises.length - 1) {
-      setCurrentExerciseIndex(currentExerciseIndex + 1);
-      setCurrentItemIndex(0);
-    } else {
-      // Session complete
-      await finishSession();
-    }
+    // Wait for feedback animation to complete before moving to next
+    // The exercise components handle their own 1.5-2s delay, so we don't move immediately
+    setTimeout(() => {
+      // Move to next item or exercise
+      if (currentItemIndex < exercise.items.length - 1) {
+        setCurrentItemIndex(currentItemIndex + 1);
+      } else if (currentExerciseIndex < sessionPlan.exercises.length - 1) {
+        setCurrentExerciseIndex(currentExerciseIndex + 1);
+        setCurrentItemIndex(0);
+      } else {
+        // Session complete
+        finishSession();
+      }
+    }, 100); // Small delay to ensure exercise completes its internal transition
   };
 
   const finishSession = async () => {
