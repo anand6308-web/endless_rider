@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, TextInput } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { NameFaceItem } from '../../types';
+import { useAppStore } from '../../store/appStore';
+import { t, LocaleCode } from '../../constants/i18n';
 
 interface NameFaceExerciseProps {
   item: NameFaceItem;
@@ -16,6 +18,8 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
   // Store the original item to prevent re-render issues
   const [originalItem] = useState(item);
   const [isCorrect, setIsCorrect] = useState(false);
+  const { userProfile } = useAppStore();
+  const locale = (userProfile?.locale || 'en-US') as LocaleCode;
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
