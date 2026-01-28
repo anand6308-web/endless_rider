@@ -54,7 +54,7 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
             <Ionicons name="eye" size={64} color="#6366f1" />
             <Text style={styles.phaseTitle}>Ready?</Text>
             <Text style={styles.phaseDescription}>
-              Memorize the {item.digits.length}-digit number that appears
+              Memorize the {originalItem.digits.length}-digit number that appears
             </Text>
             <TouchableOpacity style={styles.primaryButton} onPress={handleReady}>
               <Text style={styles.primaryButtonText}>Start</Text>
@@ -67,7 +67,7 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Text style={styles.phaseTitle}>Memorize this</Text>
             <View style={styles.numberDisplay}>
-              <Text style={styles.numberText}>{item.digits}</Text>
+              <Text style={styles.numberText}>{originalItem.digits}</Text>
             </View>
             <View style={styles.timerBar}>
               <View style={[styles.timerFill, { width: '100%' }]} />
@@ -88,15 +88,15 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
               placeholder="Enter digits"
               placeholderTextColor="#64748b"
               autoFocus
-              maxLength={item.digits.length}
+              maxLength={originalItem.digits.length}
             />
             <Text style={styles.inputHint}>
-              {userInput.length} / {item.digits.length} digits
+              {userInput.length} / {originalItem.digits.length} digits
             </Text>
             <TouchableOpacity 
-              style={[styles.primaryButton, userInput.length !== item.digits.length && styles.buttonDisabled]} 
+              style={[styles.primaryButton, userInput.length !== originalItem.digits.length && styles.buttonDisabled]} 
               onPress={handleSubmit}
-              disabled={userInput.length !== item.digits.length}
+              disabled={userInput.length !== originalItem.digits.length}
             >
               <Text style={styles.primaryButtonText}>Submit</Text>
             </TouchableOpacity>
@@ -104,24 +104,23 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
         );
 
       case 'feedback':
-        const correct = userInput.trim() === item.digits;
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Ionicons 
-              name={correct ? 'checkmark-circle' : 'close-circle'} 
+              name={isCorrect ? 'checkmark-circle' : 'close-circle'} 
               size={80} 
-              color={correct ? '#10b981' : '#ef4444'} 
+              color={isCorrect ? '#10b981' : '#ef4444'} 
             />
-            <Text style={[styles.feedbackTitle, { color: correct ? '#10b981' : '#ef4444' }]}>
-              {correct ? 'Correct!' : 'Incorrect'}
+            <Text style={[styles.feedbackTitle, { color: isCorrect ? '#10b981' : '#ef4444' }]}>
+              {isCorrect ? 'Correct!' : 'Incorrect'}
             </Text>
             <View style={styles.feedbackDetails}>
               <Text style={styles.feedbackLabel}>Your answer:</Text>
               <Text style={styles.feedbackValue}>{userInput || '(empty)'}</Text>
-              {!correct && (
+              {!isCorrect && (
                 <>
                   <Text style={styles.feedbackLabel}>Correct answer:</Text>
-                  <Text style={styles.feedbackValue}>{item.digits}</Text>
+                  <Text style={styles.feedbackValue}>{originalItem.digits}</Text>
                 </>
               )}
             </View>
