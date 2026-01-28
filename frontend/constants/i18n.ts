@@ -397,6 +397,19 @@ export const translations: Translations = {
   },
   
   // Navigation
+  'nav.home': {
+    'en-US': 'Home',
+    'en-IN': 'Home',
+    'te-IN': 'హోమ్',
+    'hi-IN': 'होम',
+    'ta-IN': 'முகப்பு',
+    'kn-IN': 'ಮುಖಪುಟ',
+    'ml-IN': 'ഹോം',
+    'mr-IN': 'होम',
+    'bn-IN': 'হোম',
+    'gu-IN': 'હોમ',
+    'pa-IN': 'ਹੋਮ'
+  },
   'nav.explore': {
     'en-US': 'Explore',
     'en-IN': 'Explore',
