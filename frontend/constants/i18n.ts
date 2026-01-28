@@ -652,16 +652,6 @@ export const translations: Translations = {
   },
   
   // Common
-  'common.continue': {
-    'en-US': 'Continue',
-    'en-IN': 'Continue',
-    'te-IN': 'కొనసాగించు'
-  },
-  'common.back': {
-    'en-US': 'Back',
-    'en-IN': 'Back',
-    'te-IN': 'వెనక్కి'
-  },
   'common.cancel': {
     'en-US': 'Cancel',
     'en-IN': 'Cancel',
