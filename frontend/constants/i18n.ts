@@ -402,22 +402,54 @@ export const translations: Translations = {
   'progress.weeklyStreak': {
     'en-US': 'Weekly Streak',
     'en-IN': 'Weekly Streak',
-    'te-IN': 'వారపు స్ట్రీక్'
+    'te-IN': 'వారపు స్ట్రీక్',
+    'hi-IN': 'साप्ताहिक स्ट्रीक',
+    'ta-IN': 'வாராந்திர தொடர்',
+    'kn-IN': 'ವಾರದ ಸ್ಟ್ರೀಕ್',
+    'ml-IN': 'പ്രതിവാര സ്ട്രീക്ക്',
+    'mr-IN': 'साप्ताहिक स्ट्रीक',
+    'bn-IN': 'সাপ্তাহিক স্ট্রিক',
+    'gu-IN': 'સાપ્તાહિક સ્ટ્રીક',
+    'pa-IN': 'ਹਫ਼ਤਾਵਾਰੀ ਸਟ੍ਰੀਕ'
   },
   'progress.totalSessions': {
     'en-US': 'Total Sessions',
     'en-IN': 'Total Sessions',
-    'te-IN': 'మొత్తం సెషన్లు'
+    'te-IN': 'మొత్తం సెషన్లు',
+    'hi-IN': 'कुल सत्र',
+    'ta-IN': 'மொத்த அமர்வுகள்',
+    'kn-IN': 'ಒಟ್ಟು ಅಧಿವೇಶನಗಳು',
+    'ml-IN': 'മൊത്തം സെഷനുകൾ',
+    'mr-IN': 'एकूण सत्रे',
+    'bn-IN': 'মোট সেশন',
+    'gu-IN': 'કુલ સત્રો',
+    'pa-IN': 'ਕੁੱਲ ਸੈਸ਼ਨ'
   },
   'progress.accuracy': {
     'en-US': 'Accuracy',
     'en-IN': 'Accuracy',
-    'te-IN': 'ఖచ్చితత్వం'
+    'te-IN': 'ఖచ్చితత్వం',
+    'hi-IN': 'सटीकता',
+    'ta-IN': 'துல்லியம்',
+    'kn-IN': 'ನಿಖರತೆ',
+    'ml-IN': 'കൃത്യത',
+    'mr-IN': 'अचूकता',
+    'bn-IN': 'নির্ভুলতা',
+    'gu-IN': 'ચોકસાઈ',
+    'pa-IN': 'ਸ਼ੁੱਧਤਾ'
   },
   'progress.avgResponseTime': {
     'en-US': 'Avg. Response Time',
     'en-IN': 'Avg. Response Time',
-    'te-IN': 'సగటు ప్రతిస్పందన సమయం'
+    'te-IN': 'సగటు ప్రతిస్పందన సమయం',
+    'hi-IN': 'औसत प्रतिक्रिया समय',
+    'ta-IN': 'சராசரி பதில் நேரம்',
+    'kn-IN': 'ಸರಾಸರಿ ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ',
+    'ml-IN': 'ശരാശരി പ്രതികരണ സമയം',
+    'mr-IN': 'सरासरी प्रतिसाद वेळ',
+    'bn-IN': 'গড় প্রতিক্রিয়ার সময়',
+    'gu-IN': 'સરેરાશ પ્રતિસાદ સમય',
+    'pa-IN': 'ਔਸਤ ਜਵਾਬ ਸਮਾਂ'
   },
   
   // Settings
