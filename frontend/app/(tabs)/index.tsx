@@ -52,8 +52,8 @@ export default function HomeScreen() {
         {/* Header */}
         <View style={styles.header}>
           <View>
-            <Text style={styles.greeting}>Good Morning! 🌅</Text>
-            <Text style={styles.subtitle}>Ready to train your brain?</Text>
+            <Text style={styles.greeting}>{t('greeting.goodMorning', locale)} 🌅</Text>
+            <Text style={styles.subtitle}>{t('greeting.readyToTrain', locale)}</Text>
           </View>
           <TouchableOpacity style={styles.notificationButton}>
             <Ionicons name="notifications-outline" size={24} color="#cbd5e1" />
