@@ -81,6 +81,150 @@
       },
       "minAppVersion": "1.0.0",
       "version": "1.0.0"
+    },
+    {
+      "id": "cooking_recipes",
+      "name": "Recipe Memory",
+      "type": "cooking",
+      "params": {
+        "recipes": [
+          {
+            "name": "Sambar",
+            "ingredients": ["Toor dal", "Tamarind", "Tomatoes", "Drumsticks", "Sambar powder", "Curry leaves", "Mustard seeds"],
+            "correctOrder": [0, 1, 2, 3, 4, 5, 6]
+          },
+          {
+            "name": "Pulao",
+            "ingredients": ["Basmati rice", "Ghee", "Whole spices", "Vegetables", "Water", "Salt"],
+            "correctOrder": [1, 2, 0, 3, 4, 5]
+          },
+          {
+            "name": "Chapati",
+            "ingredients": ["Wheat flour", "Water", "Salt", "Oil"],
+            "correctOrder": [0, 2, 1, 3]
+          }
+        ],
+        "timeLimit": 4000
+      },
+      "scoring": {
+        "correctPoints": 20,
+        "timeBonus": false,
+        "penaltyPerError": 5
+      },
+      "scheduling": {
+        "initialInterval": 30,
+        "successMultiplier": 2.0,
+        "failureMultiplier": 0.5,
+        "maxInterval": 10
+      },
+      "minAppVersion": "1.0.0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "politics_governance",
+      "name": "Governance Quiz",
+      "type": "politics",
+      "params": {
+        "topics": [
+          {
+            "question": "What is the maximum gap between two Parliament sessions?",
+            "facts": [
+              "Parliament must meet at least twice a year",
+              "Gap between sessions cannot exceed 6 months",
+              "President summons Parliament sessions"
+            ],
+            "options": ["3 months", "6 months", "9 months", "12 months"],
+            "correctAnswer": 1
+          },
+          {
+            "question": "Who appoints the Chief Election Commissioner of India?",
+            "facts": [
+              "Election Commission conducts elections",
+              "Has 1 Chief and 2 Election Commissioners",
+              "They have 6-year tenure or until 65 years of age"
+            ],
+            "options": ["Prime Minister", "President", "Parliament", "Supreme Court"],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      "scoring": {
+        "correctPoints": 15,
+        "timeBonus": true,
+        "penaltyPerError": 3
+      },
+      "scheduling": {
+        "initialInterval": 45,
+        "successMultiplier": 2.2,
+        "failureMultiplier": 0.4,
+        "maxInterval": 14
+      },
+      "minAppVersion": "1.0.0",
+      "version": "1.0.0"
+    },
+    {
+      "id": "farming_knowledge",
+      "name": "Crop Cultivation",
+      "type": "farming",
+      "params": {
+        "crops": [
+          {
+            "name": "Rice (Paddy)",
+            "stages": [
+              "Land preparation with plowing",
+              "Seed selection and treatment",
+              "Nursery preparation and sowing",
+              "Transplanting after 25-30 days",
+              "Water management - keep flooded",
+              "Fertilizer application in 3 stages",
+              "Pest control and weeding",
+              "Harvesting after 120-150 days"
+            ],
+            "tips": [
+              "Rice needs standing water for good growth",
+              "Best season: Kharif (June-October)",
+              "Requires clayey soil with good water retention"
+            ],
+            "question": "What is the ideal water condition for rice cultivation?",
+            "options": ["Dry land", "Standing water 2-3 inches", "Drip irrigation only", "Rain water only"],
+            "correctAnswer": 1
+          },
+          {
+            "name": "Cotton",
+            "stages": [
+              "Deep plowing for root development",
+              "Sowing in rows with spacing",
+              "First irrigation after 3-4 weeks",
+              "Weeding and inter-cultivation",
+              "Pest management (bollworm control)",
+              "Flowering stage care",
+              "Boll formation monitoring",
+              "Picking when bolls open"
+            ],
+            "tips": [
+              "Cotton needs warm weather and sunshine",
+              "Black soil is best for cotton",
+              "Regular pest monitoring is crucial"
+            ],
+            "question": "Which type of soil is most suitable for cotton?",
+            "options": ["Sandy soil", "Black cotton soil", "Red soil", "Clay soil"],
+            "correctAnswer": 1
+          }
+        ]
+      },
+      "scoring": {
+        "correctPoints": 18,
+        "timeBonus": false,
+        "penaltyPerError": 4
+      },
+      "scheduling": {
+        "initialInterval": 60,
+        "successMultiplier": 2.3,
+        "failureMultiplier": 0.4,
+        "maxInterval": 14
+      },
+      "minAppVersion": "1.0.0",
+      "version": "1.0.0"
     }
   ],
   "tracks": [
@@ -106,17 +250,38 @@
       "icon": "eye"
     },
     {
+      "id": "cooking",
+      "name": "Cooking",
+      "description": "Remember recipes and cooking sequences",
+      "exerciseIds": ["cooking_recipes"],
+      "icon": "restaurant"
+    },
+    {
+      "id": "politics",
+      "name": "Politics & Governance",
+      "description": "Learn about government and politics",
+      "exerciseIds": ["politics_governance"],
+      "icon": "flag"
+    },
+    {
+      "id": "farming",
+      "name": "Farming",
+      "description": "Agricultural knowledge and crop cultivation",
+      "exerciseIds": ["farming_knowledge"],
+      "icon": "leaf"
+    },
+    {
       "id": "custom",
       "name": "Custom Mix",
       "description": "Mix of all exercise types",
-      "exerciseIds": ["number_recall_otp", "name_face_snap", "focus_switch_rules"],
+      "exerciseIds": ["number_recall_otp", "name_face_snap", "focus_switch_rules", "cooking_recipes", "politics_governance", "farming_knowledge"],
       "icon": "shuffle"
     },
     {
       "id": "surprise",
       "name": "Surprise Me",
       "description": "Random exercise selection",
-      "exerciseIds": ["number_recall_otp", "name_face_snap", "focus_switch_rules"],
+      "exerciseIds": ["number_recall_otp", "name_face_snap", "focus_switch_rules", "cooking_recipes", "politics_governance", "farming_knowledge"],
       "icon": "gift"
     }
   ]
