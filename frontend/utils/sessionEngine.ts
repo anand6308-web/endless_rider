@@ -78,7 +78,7 @@ const generateExerciseItems = (
   count: number,
   locale: string,
   difficultyLevel: number
-): (NumberRecallItem | NameFaceItem | FocusSwitchItem)[] => {
+): (NumberRecallItem | NameFaceItem | FocusSwitchItem | CookingItem | PoliticsItem | FarmingItem)[] => {
   const items: any[] = [];
 
   switch (exercise.type) {
@@ -101,6 +101,27 @@ const generateExerciseItems = (
     case 'focus_switch':
       for (let i = 0; i < count; i++) {
         items.push(generateFocusSwitchItem(exercise, difficultyLevel));
+      }
+      break;
+
+    case 'cooking':
+      const recipes = exercise.params.recipes || [];
+      for (let i = 0; i < count && i < recipes.length; i++) {
+        items.push(generateCookingItem(recipes[i], exercise.params.timeLimit));
+      }
+      break;
+
+    case 'politics':
+      const topics = exercise.params.topics || [];
+      for (let i = 0; i < count && i < topics.length; i++) {
+        items.push(generatePoliticsItem(topics[i]));
+      }
+      break;
+
+    case 'farming':
+      const crops = exercise.params.crops || [];
+      for (let i = 0; i < count && i < crops.length; i++) {
+        items.push(generateFarmingItem(crops[i]));
       }
       break;
   }
