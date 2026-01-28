@@ -1,4 +1,4 @@
-import { ExerciseDefinition, SessionConfig, NumberRecallItem, NameFaceItem, FocusSwitchItem, DifficultyLevel } from '../types';
+import { ExerciseDefinition, SessionConfig, NumberRecallItem, NameFaceItem, FocusSwitchItem, CookingItem, PoliticsItem, FarmingItem, DifficultyLevel } from '../types';
 import { getNumberRecallDifficulty, getNameFaceDifficulty, getFocusSwitchDifficulty } from './adaptiveDifficulty';
 import exercisesData from '../constants/exercises.json';
 import contentPacksData from '../constants/content-packs.json';
