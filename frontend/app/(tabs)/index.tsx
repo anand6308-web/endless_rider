@@ -66,11 +66,11 @@ export default function HomeScreen() {
             <Text style={styles.fireEmoji}>🔥</Text>
           </View>
           <View style={styles.streakInfo}>
-            <Text style={styles.streakNumber}>0 Days</Text>
-            <Text style={styles.streakLabel}>Current Streak</Text>
+            <Text style={styles.streakNumber}>0 {t('time.days', locale)}</Text>
+            <Text style={styles.streakLabel}>{t('status.currentStreak', locale)}</Text>
           </View>
           <TouchableOpacity style={styles.streakButton}>
-            <Text style={styles.streakButtonText}>Details</Text>
+            <Text style={styles.streakButtonText}>{t('status.details', locale)}</Text>
           </TouchableOpacity>
         </View>
 
