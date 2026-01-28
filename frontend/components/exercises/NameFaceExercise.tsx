@@ -70,7 +70,7 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
               <View style={styles.facePlaceholder}>
                 <Ionicons name="person" size={80} color="#8b5cf6" />
               </View>
-              <Text style={styles.nameText}>{item.name}</Text>
+              <Text style={styles.nameText}>{originalItem.name}</Text>
             </View>
             <View style={styles.timerBar}>
               <View style={[styles.timerFill, { width: '100%' }]} />
@@ -87,9 +87,9 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
                 <Ionicons name="person" size={80} color="#8b5cf6" />
               </View>
             </View>
-            {item.options ? (
+            {originalItem.options && originalItem.options.length > 0 ? (
               <View style={styles.optionsContainer}>
-                {item.options.map((option) => (
+                {originalItem.options.map((option) => (
                   <TouchableOpacity
                     key={option}
                     style={styles.optionButton}
@@ -114,16 +114,15 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
         );
 
       case 'feedback':
-        const correct = selectedName.toLowerCase() === item.name.toLowerCase();
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Ionicons 
-              name={correct ? 'checkmark-circle' : 'close-circle'} 
+              name={isCorrect ? 'checkmark-circle' : 'close-circle'} 
               size={80} 
-              color={correct ? '#10b981' : '#ef4444'} 
+              color={isCorrect ? '#10b981' : '#ef4444'} 
             />
-            <Text style={[styles.feedbackTitle, { color: correct ? '#10b981' : '#ef4444' }]}>
-              {correct ? 'Correct!' : 'Incorrect'}
+            <Text style={[styles.feedbackTitle, { color: isCorrect ? '#10b981' : '#ef4444' }]}>
+              {isCorrect ? 'Correct!' : 'Incorrect'}
             </Text>
             <View style={styles.feedbackDetails}>
               <View style={styles.facePlaceholder}>
@@ -131,10 +130,10 @@ export default function NameFaceExercise({ item, onComplete }: NameFaceExerciseP
               </View>
               <Text style={styles.feedbackLabel}>Your answer:</Text>
               <Text style={styles.feedbackValue}>{selectedName}</Text>
-              {!correct && (
+              {!isCorrect && (
                 <>
                   <Text style={styles.feedbackLabel}>Correct name:</Text>
-                  <Text style={styles.feedbackValue}>{item.name}</Text>
+                  <Text style={styles.feedbackValue}>{originalItem.name}</Text>
                 </>
               )}
             </View>
