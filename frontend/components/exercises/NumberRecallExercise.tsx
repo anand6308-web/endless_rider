@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Animated, KeyboardAvoidingView, Platform, Keyboard, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { NumberRecallItem } from '../../types';
+import { useAppStore } from '../../store/appStore';
+import { t } from '../../constants/i18n';
 
 interface NumberRecallExerciseProps {
   item: NumberRecallItem;
@@ -9,6 +11,9 @@ interface NumberRecallExerciseProps {
 }
 
 export default function NumberRecallExercise({ item, onComplete }: NumberRecallExerciseProps) {
+  const { userProfile } = useAppStore();
+  const locale = (userProfile?.locale || 'en-US') as 'en-US' | 'en-IN' | 'te-IN' | 'hi-IN' | 'ta-IN' | 'kn-IN' | 'ml-IN' | 'mr-IN' | 'bn-IN' | 'gu-IN' | 'pa-IN';
+  
   const [phase, setPhase] = useState<'ready' | 'memorize' | 'recall' | 'feedback'>('ready');
   const [userInput, setUserInput] = useState('');
   const [startTime, setStartTime] = useState(0);
@@ -35,6 +40,9 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
   };
 
   const handleSubmit = () => {
+    // CRITICAL FIX: Dismiss keyboard before proceeding
+    Keyboard.dismiss();
+    
     const responseTime = Date.now() - startTime;
     const correct = userInput.trim() === originalItem.digits;
     
@@ -52,12 +60,12 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Ionicons name="eye" size={64} color="#6366f1" />
-            <Text style={styles.phaseTitle}>Ready?</Text>
+            <Text style={styles.phaseTitle}>{t('number.ready', locale)}</Text>
             <Text style={styles.phaseDescription}>
-              Memorize the {originalItem.digits.length}-digit number that appears
+              {t('number.instruction.memorize', locale).replace('{length}', originalItem.digits.length.toString())}
             </Text>
             <TouchableOpacity style={styles.primaryButton} onPress={handleReady}>
-              <Text style={styles.primaryButtonText}>Start</Text>
+              <Text style={styles.primaryButtonText}>{t('button.start', locale)}</Text>
             </TouchableOpacity>
           </Animated.View>
         );
@@ -65,7 +73,7 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
       case 'memorize':
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Memorize this</Text>
+            <Text style={styles.phaseTitle}>{t('number.instruction.memorize', locale).replace('{length}', originalItem.digits.length.toString())}</Text>
             <View style={styles.numberDisplay}>
               <Text style={styles.numberText}>{originalItem.digits}</Text>
             </View>
@@ -77,27 +85,41 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
 
       case 'recall':
         return (
-          <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Now recall</Text>
-            <Text style={styles.phaseDescription}>Enter the number you memorized</Text>
-            <TextInput
-              style={styles.input}
-              value={userInput}
-              onChangeText={setUserInput}
-              keyboardType="number-pad"
-              placeholder="Enter digits"
-              placeholderTextColor="#64748b"
-              autoFocus
-              maxLength={originalItem.digits.length}
-            />
-            <Text style={styles.inputHint}>
-              {userInput.length} / {originalItem.digits.length} digits
-            </Text>
-            <TouchableOpacity 
-              style={[styles.primaryButton, userInput.length !== originalItem.digits.length && styles.buttonDisabled]} 
-              onPress={handleSubmit}
-              disabled={userInput.length !== originalItem.digits.length}
+          <KeyboardAvoidingView 
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            style={{ flex: 1, width: '100%' }}
+          >
+            <ScrollView 
+              contentContainerStyle={{ flexGrow: 1 }} 
+              keyboardShouldPersistTaps="handled"
             >
+              <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
+                <Text style={styles.phaseTitle}>{t('number.instruction.recall', locale)}</Text>
+                <Text style={styles.phaseDescription}>{t('exercise.enterDigits', locale)}</Text>
+                <TextInput
+                  style={styles.input}
+                  value={userInput}
+                  onChangeText={setUserInput}
+                  keyboardType="number-pad"
+                  placeholder={t('exercise.enterDigits', locale)}
+                  placeholderTextColor="#64748b"
+                  autoFocus
+                  maxLength={originalItem.digits.length}
+                  returnKeyType="done"
+                  onSubmitEditing={() => {
+                    if (userInput.length === originalItem.digits.length) {
+                      handleSubmit();
+                    }
+                  }}
+                />
+                <Text style={styles.inputHint}>
+                  {userInput.length} / {originalItem.digits.length} {t('exercise.digitsEntered', locale)}
+                </Text>
+                <TouchableOpacity 
+                  style={[styles.primaryButton, userInput.length !== originalItem.digits.length && styles.buttonDisabled]} 
+                  onPress={handleSubmit}
+                  disabled={userInput.length !== originalItem.digits.length}
+                >
               <Text style={styles.primaryButtonText}>Submit</Text>
             </TouchableOpacity>
           </Animated.View>
