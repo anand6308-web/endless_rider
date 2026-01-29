@@ -13,7 +13,7 @@ export default function OnboardingScreen() {
   
   const [step, setStep] = useState(0);
   const [selectedLocale, setSelectedLocale] = useState<LocaleCode>('en-US');
-  const [selectedTrack, setSelectedTrack] = useState<'numbers' | 'names' | 'focus'>('numbers');
+  const [selectedTrack, setSelectedTrack] = useState<'numbers' | 'names' | 'focus' | 'cooking' | 'farming'>('numbers');
   const [selectedTime, setSelectedTime] = useState<2 | 5 | 10>(5);
   const [voiceMode, setVoiceMode] = useState(false);
 
@@ -35,6 +35,8 @@ export default function OnboardingScreen() {
     { id: 'numbers' as const, name: t('track.numbers', selectedLocale), icon: '🔢' },
     { id: 'names' as const, name: t('track.names', selectedLocale), icon: '👤' },
     { id: 'focus' as const, name: t('track.focus', selectedLocale), icon: '🎯' },
+    { id: 'cooking' as const, name: t('track.cooking', selectedLocale), icon: '🍳' },
+    { id: 'farming' as const, name: t('track.farming', selectedLocale), icon: '🌾' },
   ];
 
   const timeOptions = [2, 5, 10] as const;
@@ -82,24 +84,77 @@ export default function OnboardingScreen() {
   const renderStep = () => {
     switch (step) {
       case 0:
+        // STEP 1: Language Selection (FIRST SCREEN)
         return (
           <View style={styles.stepContainer}>
-            <Text style={styles.emoji}>🧠</Text>
-            <Text style={styles.title}>{t('onboarding.welcome', selectedLocale)}</Text>
+            <Text style={styles.emoji}>🌍</Text>
+            <Text style={styles.title}>{t('onboarding.selectLanguage', selectedLocale)}</Text>
             <Text style={styles.description}>
-              Train your memory and focus with scientifically-backed exercises.
-              Just 2-10 minutes daily can make a difference.
+              {t('onboarding.languageDescription', selectedLocale)}
             </Text>
-            <Text style={styles.disclaimer}>
-              {t('onboarding.disclaimer', selectedLocale)}
-            </Text>
-            <TouchableOpacity style={styles.primaryButton} onPress={() => setStep(1)}>
-              <Text style={styles.primaryButtonText}>{t('common.continue', selectedLocale)}</Text>
+            <ScrollView style={styles.optionsContainer}>
+              {locales.map((locale) => (
+                <TouchableOpacity
+                  key={locale.code}
+                  style={[
+                    styles.optionCard,
+                    selectedLocale === locale.code && styles.optionCardSelected,
+                  ]}
+                  onPress={() => setSelectedLocale(locale.code)}
+                >
+                  <Text style={styles.optionText}>{locale.name}</Text>
+                  {selectedLocale === locale.code && (
+                    <Text style={styles.checkmark}>✓</Text>
+                  )}
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+            <TouchableOpacity 
+              style={styles.primaryButton} 
+              onPress={() => {
+                setCurrentLocale(selectedLocale);
+                setStep(1); // Go directly to track selection
+              }}
+            >
+              <Text style={styles.primaryButtonText}>{t('button.next', selectedLocale)}</Text>
             </TouchableOpacity>
           </View>
         );
 
       case 1:
+        // STEP 2: Track Selection (IMMEDIATE AFTER LANGUAGE)
+        return (
+          <View style={styles.stepContainer}>
+            <Text style={styles.emoji}>🎯</Text>
+            <Text style={styles.title}>{t('onboarding.selectTrack', selectedLocale)}</Text>
+            <Text style={styles.description}>
+              {t('onboarding.trackDescription', selectedLocale)}
+            </Text>
+            <ScrollView style={styles.optionsContainer}>
+              {tracks.map((track) => (
+                <TouchableOpacity
+                  key={track.id}
+                  style={[
+                    styles.optionCard,
+                    selectedTrack === track.id && styles.optionCardSelected,
+                  ]}
+                  onPress={() => setSelectedTrack(track.id)}
+                >
+                  <Text style={styles.optionIcon}>{track.icon}</Text>
+                  <Text style={styles.optionText}>{track.name}</Text>
+                  {selectedTrack === track.id && (
+                    <Text style={styles.checkmark}>✓</Text>
+                  )}
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+            <TouchableOpacity style={styles.primaryButton} onPress={() => setStep(2)}>
+              <Text style={styles.primaryButtonText}>{t('button.next', selectedLocale)}</Text>
+            </TouchableOpacity>
+          </View>
+        );
+
+      case 2:
         return (
           <View style={styles.stepContainer}>
             <Text style={styles.stepTitle}>{t('onboarding.selectLocale', selectedLocale)}</Text>
