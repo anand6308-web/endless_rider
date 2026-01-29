@@ -120,7 +120,7 @@ export default function NumberRecallExercise({ item, onComplete }: NumberRecallE
                   onPress={handleSubmit}
                   disabled={userInput.length !== originalItem.digits.length}
                 >
-              <Text style={styles.primaryButtonText}>Submit</Text>
+              <Text style={styles.primaryButtonText}>{t('button.submit', locale)}</Text>
             </TouchableOpacity>
           </Animated.View>
         );
