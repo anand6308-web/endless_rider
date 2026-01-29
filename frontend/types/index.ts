@@ -3,7 +3,7 @@
 export interface UserProfile {
   userId: string;
   locale: 'en-US' | 'en-IN' | 'te-IN' | 'hi-IN' | 'ta-IN' | 'kn-IN' | 'ml-IN' | 'mr-IN' | 'bn-IN' | 'gu-IN' | 'pa-IN';
-  selectedTrack: 'numbers' | 'names' | 'focus' | 'cooking' | 'farming';
+  selectedTrack: 'numbers' | 'names' | 'cooking' | 'farming' | 'politics';
   dailyTime: 2 | 5 | 10;
   voiceMode: boolean;
   textSize: 'normal' | 'large' | 'extra_large';

@@ -13,7 +13,7 @@ export default function OnboardingScreen() {
   
   const [step, setStep] = useState(0);
   const [selectedLocale, setSelectedLocale] = useState<LocaleCode>('en-US');
-  const [selectedTrack, setSelectedTrack] = useState<'numbers' | 'names' | 'focus' | 'cooking' | 'farming'>('numbers');
+  const [selectedTrack, setSelectedTrack] = useState<'numbers' | 'names' | 'cooking' | 'farming' | 'politics'>('numbers');
 
   const locales: { code: LocaleCode; name: string }[] = [
     { code: 'en-US', name: 'English (US)' },
@@ -32,9 +32,9 @@ export default function OnboardingScreen() {
   const tracks = [
     { id: 'numbers' as const, name: t('track.numbers', selectedLocale), icon: '🔢' },
     { id: 'names' as const, name: t('track.names', selectedLocale), icon: '👤' },
-    { id: 'focus' as const, name: t('track.focus', selectedLocale), icon: '🎯' },
     { id: 'cooking' as const, name: t('track.cooking', selectedLocale), icon: '🍳' },
     { id: 'farming' as const, name: t('track.farming', selectedLocale), icon: '🌾' },
+    { id: 'politics' as const, name: t('track.politics', selectedLocale), icon: '🏛️' },
   ];
 
   const handleComplete = async () => {
