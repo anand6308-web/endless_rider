@@ -22,10 +22,7 @@ export default function HomeScreen() {
     { value: 'names', label: t('track.names', locale), icon: 'people', color: '#8b5cf6' },
     { value: 'focus', label: t('track.focus', locale), icon: 'eye', color: '#10b981' },
     { value: 'cooking', label: t('track.cooking', locale), icon: 'restaurant', color: '#f59e0b' },
-    { value: 'politics', label: t('track.politics', locale), icon: 'flag', color: '#ec4899' },
     { value: 'farming', label: t('track.farming', locale), icon: 'leaf', color: '#22c55e' },
-    { value: 'custom', label: t('track.custom', locale), icon: 'shuffle', color: '#f59e0b' },
-    { value: 'surprise', label: t('track.surprise', locale), icon: 'gift', color: '#ec4899' },
   ];
 
   const handleStartSession = () => {
