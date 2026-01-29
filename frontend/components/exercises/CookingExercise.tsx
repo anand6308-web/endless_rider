@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useAppStore } from '../../store/appStore';
+import { t } from '../../constants/i18n';
 
 interface CookingExerciseProps {
   item: {
@@ -12,11 +14,49 @@ interface CookingExerciseProps {
   onComplete: (correct: boolean, responseTime: number) => void;
 }
 
+// Translation mapping for recipe names
+const recipeNameMap: { [key: string]: string } = {
+  'Sambar': 'cooking.recipe.sambar',
+  'Pulao': 'cooking.recipe.pulao',
+  'Biryani': 'cooking.recipe.biryani',
+  'Dosa': 'cooking.recipe.dosa',
+};
+
+// Translation mapping for ingredients
+const ingredientMap: { [key: string]: string } = {
+  'Toor dal': 'cooking.ingredient.toorDal',
+  'Tamarind': 'cooking.ingredient.tamarind',
+  'Tomatoes': 'cooking.ingredient.tomatoes',
+  'Drumsticks': 'cooking.ingredient.drumsticks',
+  'Sambar powder': 'cooking.ingredient.sambarPowder',
+  'Curry leaves': 'cooking.ingredient.curryLeaves',
+  'Mustard seeds': 'cooking.ingredient.mustardSeeds',
+  'Basmati rice': 'cooking.ingredient.basmatiRice',
+  'Ghee': 'cooking.ingredient.ghee',
+  'Whole spices': 'cooking.ingredient.wholeSpices',
+  'Vegetables': 'cooking.ingredient.vegetables',
+  'Water': 'cooking.ingredient.water',
+  'Salt': 'cooking.ingredient.salt',
+};
+
 export default function CookingExercise({ item, onComplete }: CookingExerciseProps) {
+  const { userProfile } = useAppStore();
+  const locale = (userProfile?.locale || 'en-US') as 'en-US' | 'en-IN' | 'te-IN' | 'hi-IN' | 'ta-IN' | 'kn-IN' | 'ml-IN' | 'mr-IN' | 'bn-IN' | 'gu-IN' | 'pa-IN';
+  
   const [phase, setPhase] = useState<'ready' | 'memorize' | 'recall' | 'feedback'>('ready');
   const [selectedOrder, setSelectedOrder] = useState<number[]>([]);
   const [startTime, setStartTime] = useState(0);
   const [fadeAnim] = useState(new Animated.Value(0));
+  
+  // Translate recipe name
+  const translatedRecipeName = recipeNameMap[item.recipeName] 
+    ? t(recipeNameMap[item.recipeName], locale)
+    : item.recipeName;
+  
+  // Translate ingredients
+  const translatedIngredients = item.ingredients.map(ing => 
+    ingredientMap[ing] ? t(ingredientMap[ing], locale) : ing
+  );
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
@@ -57,15 +97,15 @@ export default function CookingExercise({ item, onComplete }: CookingExercisePro
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Ionicons name="restaurant" size={64} color="#f59e0b" />
-            <Text style={styles.phaseTitle}>Cooking Challenge</Text>
+            <Text style={styles.phaseTitle}>{t('exercise.name.cooking_recipes', locale)}</Text>
             <Text style={styles.phaseDescription}>
-              Remember the order of ingredients for:
+              {t('cooking.learning', locale)}
             </Text>
             <View style={styles.recipeCard}>
-              <Text style={styles.recipeName}>{item.recipeName}</Text>
+              <Text style={styles.recipeName}>{translatedRecipeName}</Text>
             </View>
             <TouchableOpacity style={styles.primaryButton} onPress={handleReady}>
-              <Text style={styles.primaryButtonText}>Start</Text>
+              <Text style={styles.primaryButtonText}>{t('button.start', locale)}</Text>
             </TouchableOpacity>
           </Animated.View>
         );
@@ -73,8 +113,8 @@ export default function CookingExercise({ item, onComplete }: CookingExercisePro
       case 'memorize':
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Memorize the Order</Text>
-            <Text style={styles.recipeName}>{item.recipeName}</Text>
+            <Text style={styles.phaseTitle}>{t('cooking.learning', locale)}</Text>
+            <Text style={styles.recipeName}>{translatedRecipeName}</Text>
             <ScrollView style={styles.ingredientsList}>
               {item.correctOrder.map((idx, position) => (
                 <View key={position} style={styles.ingredientCard}>
