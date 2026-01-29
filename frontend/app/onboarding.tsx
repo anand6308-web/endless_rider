@@ -148,13 +148,19 @@ export default function OnboardingScreen() {
                 </TouchableOpacity>
               ))}
             </ScrollView>
-            <TouchableOpacity style={styles.primaryButton} onPress={() => setStep(2)}>
-              <Text style={styles.primaryButtonText}>{t('button.next', selectedLocale)}</Text>
+            <TouchableOpacity 
+              style={styles.primaryButton} 
+              onPress={handleComplete}
+            >
+              <Text style={styles.primaryButtonText}>{t('button.start', selectedLocale)}</Text>
             </TouchableOpacity>
           </View>
         );
 
-      case 2:
+      default:
+        return null;
+    }
+  };
         return (
           <View style={styles.stepContainer}>
             <Text style={styles.stepTitle}>{t('onboarding.selectLocale', selectedLocale)}</Text>
