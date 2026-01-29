@@ -2231,6 +2231,131 @@ export const translations: Translations = {
     'gu-IN': 'અવિભાજ્ય નંબર ટેપ કરો',
     'pa-IN': 'ਪ੍ਰਾਈਮ ਨੰਬਰਾਂ \'ਤੇ ਟੈਪ ਕਰੋ'
   },
+  
+  // Mode/Track Options
+  'mode.customMix': {
+    'en-US': 'Custom Mix',
+    'en-IN': 'Custom Mix',
+    'te-IN': 'కస్టమ్ మిక్స్',
+    'hi-IN': 'कस्टम मिक्स',
+    'ta-IN': 'தனிப்பயன் கலவை',
+    'kn-IN': 'ಕಸ್ಟಮ್ ಮಿಕ್ಸ್',
+    'ml-IN': 'കസ്റ്റം മിക്സ്',
+    'mr-IN': 'कस्टम मिक्स',
+    'bn-IN': 'কাস্টম মিক্স',
+    'gu-IN': 'કસ્ટમ મિક્સ',
+    'pa-IN': 'ਕਸਟਮ ਮਿਕਸ'
+  },
+  'mode.surpriseMe': {
+    'en-US': 'Surprise Me',
+    'en-IN': 'Surprise Me',
+    'te-IN': 'నన్ను ఆశ్చర్యపరచండి',
+    'hi-IN': 'मुझे आश्चर्यचकित करो',
+    'ta-IN': 'என்னை ஆச்சரியப்படுத்துங்கள்',
+    'kn-IN': 'ನನ್ನನ್ನು ಆಶ್ಚರ್ಯಗೊಳಿಸಿ',
+    'ml-IN': 'എന്നെ അത്ഭുതപ്പെടുത്തുക',
+    'mr-IN': 'मला आश्चर्यचकित करा',
+    'bn-IN': 'আমাকে অবাক করুন',
+    'gu-IN': 'મને આશ્ચર્યચકિત કરો',
+    'pa-IN': 'ਮੈਨੂੰ ਹੈਰਾਨ ਕਰੋ'
+  },
+  
+  // Number Recall Instructions
+  'number.instruction.memorize': {
+    'en-US': 'Memorize the {length}-digit number',
+    'en-IN': 'Memorize the {length}-digit number',
+    'te-IN': '{length}-అంకెల సంఖ్యను గుర్తుంచుకోండి',
+    'hi-IN': '{length}-अंकीय संख्या याद करें',
+    'ta-IN': '{length}-இலக்க எண்ணை நினைவில் வைக்கவும்',
+    'kn-IN': '{length}-ಅಂಕಿ ಸಂಖ್ಯೆಯನ್ನು ನೆನಪಿಡಿ',
+    'ml-IN': '{length}-അക്ക സംഖ്യ ഓർക്കുക',
+    'mr-IN': '{length}-अंकी क्रमांक लक्षात ठेवा',
+    'bn-IN': '{length}-সংখ্যার নম্বর মনে রাখুন',
+    'gu-IN': '{length}-અંકનો નંબર યાદ રાખો',
+    'pa-IN': '{length}-ਅੰਕ ਦਾ ਨੰਬਰ ਯਾਦ ਰੱਖੋ'
+  },
+  'number.instruction.recall': {
+    'en-US': 'Enter the number you saw',
+    'en-IN': 'Enter the number you saw',
+    'te-IN': 'మీరు చూసిన సంఖ్యను నమోదు చేయండి',
+    'hi-IN': 'आपने जो संख्या देखी वह दर्ज करें',
+    'ta-IN': 'நீங்கள் பார்த்த எண்ணை உள்ளிடவும்',
+    'kn-IN': 'ನೀವು ನೋಡಿದ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ',
+    'ml-IN': 'നിങ്ങൾ കണ്ട സംഖ്യ നൽകുക',
+    'mr-IN': 'तुम्ही पाहिलेला क्रमांक प्रविष्ट करा',
+    'bn-IN': 'আপনি যে নম্বরটি দেখেছেন তা লিখুন',
+    'gu-IN': 'તમે જે નંબર જોયો તે દાખલ કરો',
+    'pa-IN': 'ਤੁਸੀਂ ਜੋ ਨੰਬਰ ਦੇਖਿਆ ਉਹ ਦਾਖਲ ਕਰੋ'
+  },
+  'number.ready': {
+    'en-US': 'Get ready to memorize',
+    'en-IN': 'Get ready to memorize',
+    'te-IN': 'గుర్తుంచుకోవడానికి సిద్ధంగా ఉండండి',
+    'hi-IN': 'याद करने के लिए तैयार हो जाएं',
+    'ta-IN': 'நினைவில் வைக்கத் தயாராகுங்கள்',
+    'kn-IN': 'ನೆನಪಿಡಲು ತಯಾರಾಗಿ',
+    'ml-IN': 'ഓർമ്മിക്കാൻ തയ്യാറാകൂ',
+    'mr-IN': 'लक्षात ठेवण्यासाठी तयार व्हा',
+    'bn-IN': 'মনে রাখার জন্য প্রস্তুত হন',
+    'gu-IN': 'યાદ કરવા માટે તૈયાર થાઓ',
+    'pa-IN': 'ਯਾਦ ਰੱਖਣ ਲਈ ਤਿਆਰ ਹੋ ਜਾਓ'
+  },
+  'number.continue': {
+    'en-US': 'Continue',
+    'en-IN': 'Continue',
+    'te-IN': 'కొనసాగించు',
+    'hi-IN': 'जारी रखें',
+    'ta-IN': 'தொடரவும்',
+    'kn-IN': 'ಮುಂದುವರಿಸಿ',
+    'ml-IN': 'തുടരുക',
+    'mr-IN': 'सुरू ठेवा',
+    'bn-IN': 'চালিয়ে যান',
+    'gu-IN': 'ચાલુ રાખો',
+    'pa-IN': 'ਜਾਰੀ ਰੱਖੋ'
+  },
+  
+  // Politics Exercise
+  'politics.title': {
+    'en-US': 'Politics & Elections',
+    'en-IN': 'Politics & Elections',
+    'te-IN': 'రాజకీయాలు & ఎన్నికలు',
+    'hi-IN': 'राजनीति और चुनाव',
+    'ta-IN': 'அரசியல் & தேர்தல்கள்',
+    'kn-IN': 'ರಾಜಕೀಯ & ಚುನಾವಣೆಗಳು',
+    'ml-IN': 'രാഷ്ട്രീയവും തിരഞ്ഞെടുപ്പും',
+    'mr-IN': 'राजकारण आणि निवडणुका',
+    'bn-IN': 'রাজনীতি ও নির্বাচন',
+    'gu-IN': 'રાજકારણ અને ચૂંટણીઓ',
+    'pa-IN': 'ਰਾਜਨੀਤੀ ਅਤੇ ਚੋਣਾਂ'
+  },
+  
+  // Name-Face Instructions
+  'nameFace.instruction.memorize': {
+    'en-US': 'Memorize this person\'s name',
+    'en-IN': 'Memorize this person\'s name',
+    'te-IN': 'ఈ వ్యక్తి పేరును గుర్తుంచుకోండి',
+    'hi-IN': 'इस व्यक्ति का नाम याद करें',
+    'ta-IN': 'இந்த நபரின் பெயரை நினைவில் வைக்கவும்',
+    'kn-IN': 'ಈ ವ್ಯಕ್ತಿಯ ಹೆಸರನ್ನು ನೆನಪಿಡಿ',
+    'ml-IN': 'ഈ വ്യക്തിയുടെ പേര് ഓർക്കുക',
+    'mr-IN': 'या व्यक्तीचे नाव लक्षात ठेवा',
+    'bn-IN': 'এই ব্যক্তির নাম মনে রাখুন',
+    'gu-IN': 'આ વ્યક્તિનું નામ યાદ રાખો',
+    'pa-IN': 'ਇਸ ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਯਾਦ ਰੱਖੋ'
+  },
+  'nameFace.instruction.recall': {
+    'en-US': 'What was this person\'s name?',
+    'en-IN': 'What was this person\'s name?',
+    'te-IN': 'ఈ వ్యక్తి పేరు ఏమిటి?',
+    'hi-IN': 'इस व्यक्ति का नाम क्या था?',
+    'ta-IN': 'இந்த நபரின் பெயர் என்ன?',
+    'kn-IN': 'ಈ ವ್ಯಕ್ತಿಯ ಹೆಸರು ಏನು?',
+    'ml-IN': 'ഈ വ്യക്തിയുടെ പേര് എന്തായിരുന്നു?',
+    'mr-IN': 'या व्यक्तीचे नाव काय होते?',
+    'bn-IN': 'এই ব্যক্তির নাম কী ছিল?',
+    'gu-IN': 'આ વ્યક્તિનું નામ શું હતું?',
+    'pa-IN': 'ਇਸ ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਕੀ ਸੀ?'
+  },
 };
 
 export const t = (key: string, locale: LocaleCode = 'en-US'): string => {
