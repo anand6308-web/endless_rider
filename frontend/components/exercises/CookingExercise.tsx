@@ -121,7 +121,7 @@ export default function CookingExercise({ item, onComplete }: CookingExercisePro
                   <View style={styles.stepNumber}>
                     <Text style={styles.stepNumberText}>{position + 1}</Text>
                   </View>
-                  <Text style={styles.ingredientText}>{item.ingredients[idx]}</Text>
+                  <Text style={styles.ingredientText}>{translatedIngredients[idx]}</Text>
                 </View>
               ))}
             </ScrollView>
@@ -129,25 +129,25 @@ export default function CookingExercise({ item, onComplete }: CookingExercisePro
         );
 
       case 'recall':
-        const shuffledIngredients = [...item.ingredients]
+        const shuffledIngredients = translatedIngredients
           .map((ing, idx) => ({ ing, idx }))
           .sort(() => Math.random() - 0.5);
         
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Arrange in Order</Text>
+            <Text style={styles.phaseTitle}>{t('cooking.testing', locale)}</Text>
             <Text style={styles.phaseDescription}>
-              Tap ingredients in the correct cooking order
+              {t('cooking.testing', locale)}
             </Text>
             
             {selectedOrder.length > 0 && (
               <View style={styles.selectedContainer}>
-                <Text style={styles.selectedLabel}>Your Order:</Text>
+                <Text style={styles.selectedLabel}>{t('cooking.testing', locale)}</Text>
                 <View style={styles.selectedList}>
                   {selectedOrder.map((idx, pos) => (
                     <View key={pos} style={styles.selectedChip}>
                       <Text style={styles.selectedChipNumber}>{pos + 1}</Text>
-                      <Text style={styles.selectedChipText}>{item.ingredients[idx]}</Text>
+                      <Text style={styles.selectedChipText}>{translatedIngredients[idx]}</Text>
                     </View>
                   ))}
                 </View>
