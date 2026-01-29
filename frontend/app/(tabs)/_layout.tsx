@@ -29,29 +29,22 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: t('nav.home', locale),
-          tabBarIcon: ({ color, size }) => <Ionicons name="home" size={size} color={color} />,
+          title: t('tabs.home', locale),
+          tabBarIcon: ({ color, size }) => <Ionicons name="home" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="weekly-streak"
         options={{
-          title: t('nav.explore', locale),
-          tabBarIcon: ({ color, size }) => <Ionicons name="grid" size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="progress"
-        options={{
-          title: t('nav.progress', locale),
-          tabBarIcon: ({ color, size }) => <Ionicons name="stats-chart" size={size} color={color} />,
+          title: t('tabs.weeklyStreak', locale),
+          tabBarIcon: ({ color, size }) => <Ionicons name="calendar" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
-          title: t('nav.settings', locale),
-          tabBarIcon: ({ color, size }) => <Ionicons name="settings" size={size} color={color} />,
+          title: t('tabs.settings', locale),
+          tabBarIcon: ({ color, size }) => <Ionicons name="settings" size={28} color={color} />,
         }}
       />
     </Tabs>
