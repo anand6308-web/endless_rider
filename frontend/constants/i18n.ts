@@ -1900,6 +1900,47 @@ export const translations: Translations = {
     'gu-IN': 'પરીક્ષણ કરી રહ્યા છીએ...',
     'pa-IN': 'ਟੈਸਟ ਕਰ ਰਹੇ ਹਾਂ...'
   },
+  
+  // Button labels
+  'button.start': {
+    'en-US': 'Start Learning',
+    'en-IN': 'Start Learning',
+    'te-IN': 'నేర్చుకోవడం ప్రారంభించండి',
+    'hi-IN': 'सीखना शुरू करें',
+    'ta-IN': 'கற்றல் தொடங்கவும்',
+    'kn-IN': 'ಕಲಿಯಲು ಪ್ರಾರಂಭಿಸಿ',
+    'ml-IN': 'പഠനം ആരംഭിക്കുക',
+    'mr-IN': 'शिकणे सुरू करा',
+    'bn-IN': 'শেখা শুরু করুন',
+    'gu-IN': 'શીખવાનું શરૂ કરો',
+    'pa-IN': 'ਸਿੱਖਣਾ ਸ਼ੁਰੂ ਕਰੋ'
+  },
+  'button.next': {
+    'en-US': 'Next',
+    'en-IN': 'Next',
+    'te-IN': 'తదుపరి',
+    'hi-IN': 'अगला',
+    'ta-IN': 'அடுத்து',
+    'kn-IN': 'ಮುಂದೆ',
+    'ml-IN': 'അടുത്തത്',
+    'mr-IN': 'पुढे',
+    'bn-IN': 'পরবর্তী',
+    'gu-IN': 'આગળ',
+    'pa-IN': 'ਅਗਲਾ'
+  },
+  'button.submit': {
+    'en-US': 'Submit',
+    'en-IN': 'Submit',
+    'te-IN': 'సమర్పించు',
+    'hi-IN': 'जमा करें',
+    'ta-IN': 'சமர்ப்பிக்கவும்',
+    'kn-IN': 'ಸಲ್ಲಿಸಿ',
+    'ml-IN': 'സമർപ്പിക്കുക',
+    'mr-IN': 'सबमिट करा',
+    'bn-IN': 'জমা দিন',
+    'gu-IN': 'સબમિટ કરો',
+    'pa-IN': 'ਜਮ੍ਹਾਂ ਕਰੋ'
+  },
 };
 
 export const t = (key: string, locale: LocaleCode = 'en-US'): string => {
