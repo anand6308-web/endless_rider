@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useAppStore } from '../../store/appStore';
+import { t } from '../../constants/i18n';
 
 interface FarmingExerciseProps {
   item: {
@@ -15,6 +17,9 @@ interface FarmingExerciseProps {
 }
 
 export default function FarmingExercise({ item, onComplete }: FarmingExerciseProps) {
+  const { userProfile } = useAppStore();
+  const locale = (userProfile?.locale || 'en-US') as 'en-US' | 'en-IN' | 'te-IN' | 'hi-IN' | 'ta-IN' | 'kn-IN' | 'ml-IN' | 'mr-IN' | 'bn-IN' | 'gu-IN' | 'pa-IN';
+  
   const [phase, setPhase] = useState<'ready' | 'learn' | 'question' | 'feedback'>('ready');
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [startTime, setStartTime] = useState(0);
@@ -54,29 +59,39 @@ export default function FarmingExercise({ item, onComplete }: FarmingExercisePro
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
             <Ionicons name="leaf" size={64} color="#10b981" />
-            <Text style={styles.phaseTitle}>Farming Knowledge</Text>
+            <Text style={styles.phaseTitle}>{t('exercise.name.farming_knowledge', locale)}</Text>
             <Text style={styles.phaseDescription}>
-              Learn about growing {item.cropName}
+              {t('farming.learning', locale)}
             </Text>
             <View style={styles.cropCard}>
               <Text style={styles.cropEmoji}>🌾</Text>
-              <Text style={styles.cropName}>{item.cropName}</Text>
+              <Text style={styles.cropName}>{t('farming.title.rice', locale)}</Text>
             </View>
             <TouchableOpacity style={styles.primaryButton} onPress={handleReady}>
-              <Text style={styles.primaryButtonText}>Start Learning</Text>
+              <Text style={styles.primaryButtonText}>{t('button.start', locale)}</Text>
             </TouchableOpacity>
           </Animated.View>
         );
 
       case 'learn':
+        // Translate stages dynamically
+        const translatedStages = [
+          t('farming.stage.landPreparation', locale),
+          t('farming.stage.seedSelection', locale),
+          t('farming.stage.nurseryPreparation', locale),
+          t('farming.stage.transplanting', locale),
+          t('farming.stage.waterManagement', locale),
+          t('farming.stage.fertilizer', locale)
+        ];
+        
         return (
           <Animated.View style={[styles.phaseContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.phaseTitle}>Growing {item.cropName}</Text>
+            <Text style={styles.phaseTitle}>{t('farming.title.rice', locale)}</Text>
             
             <ScrollView style={styles.contentScroll}>
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Growth Stages</Text>
-                {item.stages.map((stage, index) => (
+                <Text style={styles.sectionTitle}>{t('farming.growthStages', locale)}</Text>
+                {translatedStages.slice(0, item.stages.length).map((stage, index) => (
                   <View key={index} style={styles.stageCard}>
                     <View style={styles.stageNumber}>
                       <Text style={styles.stageNumberText}>{index + 1}</Text>
