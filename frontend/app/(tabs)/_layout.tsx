@@ -1,11 +1,18 @@
-import { Tabs } from 'expo-router';
+import { Tabs, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useAppStore } from '../../store/appStore';
 import { t } from '../../constants/i18n';
 
 export default function TabLayout() {
-  const { userProfile } = useAppStore();
+  const router = useRouter();
+  const { userProfile, setIsOnboarded } = useAppStore();
   const locale = (userProfile?.locale || 'en-US') as 'en-US' | 'en-IN' | 'te-IN';
+
+  const handleHomePress = () => {
+    // Reset to language selection - this is intentional
+    setIsOnboarded(false);
+    router.replace('/onboarding');
+  };
 
   return (
     <Tabs
@@ -16,9 +23,9 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: '#1e293b',
           borderTopColor: '#334155',
-          height: 60,
-          paddingBottom: 8,
-          paddingTop: 8,
+          height: 70,
+          paddingBottom: 10,
+          paddingTop: 10,
         },
         tabBarLabelStyle: {
           fontSize: 12,
@@ -31,6 +38,12 @@ export default function TabLayout() {
         options={{
           title: t('tabs.home', locale),
           tabBarIcon: ({ color, size }) => <Ionicons name="home" size={28} color={color} />,
+        }}
+        listeners={{
+          tabPress: (e) => {
+            e.preventDefault();
+            handleHomePress();
+          },
         }}
       />
       <Tabs.Screen
